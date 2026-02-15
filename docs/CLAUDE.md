@@ -7,10 +7,28 @@ This is an academic JMP (Job Market Paper) project studying firm innovation thro
 
 ```
 jmp/
-├── src/                          # Source code (organized by workflow stage)
+├── README.md                    # Project overview (KEEP IN ROOT)
+├── requirements.txt             # Python dependencies (KEEP IN ROOT)
+├── commit.sh                    # Auto-commit tool (KEEP IN ROOT)
+│
+├── src/                         # Python source code (organized by workflow stage)
 │   ├── 01_data_construction/    # Data fetching, extraction, cleaning
 │   ├── 02_linking/              # Entity-to-firm matching/linking
 │   └── 03_analysis/             # Panel creation and analysis
+│
+├── scripts/                     # Shell scripts (ALL .sh files except commit.sh)
+│   ├── monitor_*.sh            # Progress monitoring scripts
+│   ├── setup_*.sh              # Setup and installation scripts
+│   └── [utility scripts]
+│
+├── docs/                        # Project documentation
+│   ├── latex/                  # LaTeX paper files
+│   │   ├── jmp_main.tex
+│   │   ├── jmp_*_section.tex
+│   │   └── references.bib
+│   ├── *.md                    # All markdown documentation
+│   └── [guides, reports, etc.]
+│
 ├── data/
 │   ├── raw/                     # Original downloaded data (NEVER modify)
 │   │   ├── publication/         # OpenAlex, arXiv raw data
@@ -19,31 +37,78 @@ jmp/
 │   ├── interim/                 # Intermediate processed data
 │   │   ├── *master.parquet     # Master entity tables
 │   │   ├── *standardized.parquet # Standardized firm data
-│   │   └── manual_*.csv        # Manual mapping files
+│   │   ├── manual_*.csv        # Manual mapping files
+│   │   └── [analysis results]
 │   └── processed/               # Final outputs for analysis
 │       ├── publication/         # Processed publication datasets
 │       ├── linking/             # Matched entity-firm pairs
 │       └── analysis/            # Firm-year panels, final datasets
+│
 ├── logs/                        # ALL script logs (one per script)
-├── output/
+├── output/                      # Generated output files
 │   ├── tables/                  # CSV/TEX tables for paper
-│   └── figures/                 # PNG/PDF figures for paper
-└── docs/                        # Project documentation
+│   ├── figures/                 # PNG/PDF figures for paper
+│   └── latex/                  # Generated LaTeX tables
 ```
+
+**CRITICAL: ROOT DIRECTORY MUST STAY CLEAN**
+- ONLY 4 files allowed in root: `README.md`, `commit.sh`, `requirements.txt`, `PROJECT_STRUCTURE.md`
+- ALL other files MUST go into appropriate subdirectories
+- NEVER create `.md`, `.txt`, `.py`, `.sh`, `.tex` files in root directory
 
 ## Strict Rules
 
-### 1. File Placement Rules
-- **NEW scripts in `src/`**: Must go into appropriate subfolder:
-  - Data fetching/extraction → `01_data_construction/`
-  - Entity matching/linking → `02_linking/`
-  - Panel/analysis creation → `03_analysis/`
-- **NEW outputs in `data/`**:
-  - Intermediate data → `data/interim/`
-  - Final matched data → `data/processed/linking/`
-  - Final analysis data → `data/processed/analysis/`
-- **ALL scripts MUST log** → `logs/{script_name}.log`
-- **Tables/figures for paper** → `output/tables/` or `output/figures/`
+### 1. File Placement Rules (STRICTLY ENFORCED)
+
+#### Python Scripts (.py)
+- **ALL** `.py` files → `src/{appropriate_subfolder}/`
+  - Data fetching/extraction → `src/01_data_construction/`
+  - Entity matching/linking → `src/02_linking/`
+  - Panel/analysis creation → `src/03_analysis/`
+- **NEVER** create `.py` files in root directory
+
+#### Shell Scripts (.sh)
+- **ALL** `.sh` files → `scripts/` (except `commit.sh` which stays in root)
+- Monitor scripts → `scripts/monitor_*.sh`
+- Setup scripts → `scripts/setup_*.sh`
+- Utility scripts → `scripts/{name}.sh`
+- **NEVER** create `.sh` files in root directory (except commit.sh)
+
+#### Documentation Files
+- **Markdown (.md)** → `docs/`
+  - Guides → `docs/*_GUIDE.md`
+  - Reports → `docs/*_REPORT.md`
+  - Summaries → `docs/*_SUMMARY.md`
+  - **NEVER** create `.md` files in root (except README.md)
+
+- **LaTeX (.tex, .bib)** → `docs/latex/`
+  - Main paper → `docs/latex/jmp_main.tex`
+  - Sections → `docs/latex/jmp_*_section.tex`
+  - Bibliography → `docs/latex/references.bib`
+  - **NEVER** create `.tex` or `.bib` files in root
+
+- **Text files (.txt)** → `docs/` (if documentation) or `data/` (if data)
+
+#### Data Files
+- **Raw data** → `data/raw/{source}/`
+- **Intermediate data** → `data/interim/`
+- **Processed data** → `data/processed/{category}/`
+- **Manual mappings** → `data/interim/manual_*.csv`
+- **Analysis results** → `data/interim/` (e.g., parquet_analysis_results.csv)
+
+#### Log Files
+- **ALL script logs** → `logs/{script_name}.log`
+- Automatic: Configure scripts to log to `PROJECT_ROOT / "logs" / f"{script_name}.log"`
+
+#### Output Files
+- **Tables for paper** → `output/tables/`
+- **Figures for paper** → `output/figures/`
+- **Generated LaTeX** → `output/latex/`
+
+#### Configuration Files
+- **requirements.txt** → Root directory (KEEP HERE)
+- **.gitignore** → Root directory (KEEP HERE)
+- **setup/config scripts** → `scripts/`
 
 ### 2. Naming Conventions
 - Scripts: `snake_case.py` with descriptive action verbs (e.g., `match_publications_to_firms_stage1.py`)
@@ -405,6 +470,50 @@ def clean_organization_name(name: str | None) -> str | None:
     return name if name else None
 ```
 
+## File Placement Checklist
+
+**BEFORE creating ANY file, ask yourself:**
+
+### For Python Scripts (.py)
+- [ ] Does this go in `src/01_data_construction/` (data fetching/cleaning)?
+- [ ] Does this go in `src/02_linking/` (entity matching)?
+- [ ] Does this go in `src/03_analysis/` (panel creation/analysis)?
+- [ ] **NEVER** create `.py` in root directory
+
+### For Shell Scripts (.sh)
+- [ ] Does this go in `scripts/`?
+- [ ] Is this named descriptively (e.g., `monitor_*.sh`, `setup_*.sh`)?
+- [ ] **NEVER** create `.sh` in root (except commit.sh)
+
+### For Documentation (.md)
+- [ ] Does this go in `docs/`?
+- [ ] **NEVER** create `.md` in root (except README.md)
+
+### For LaTeX Files (.tex, .bib)
+- [ ] Does this go in `docs/latex/`?
+- [ ] **NEVER** create `.tex` or `.bib` in root
+
+### For Data Files
+- [ ] Is this raw data? → `data/raw/{source}/`
+- [ ] Is this intermediate? → `data/interim/`
+- [ ] Is this processed? → `data/processed/{category}/`
+
+### Quick Reference
+```
+File Type  | Location
+-----------|------------------------------------------------------------
+.py        | src/{01_data_construction, 02_linking, 03_analysis}/
+.sh        | scripts/ (except commit.sh in root)
+.md        | docs/ (except README.md in root)
+.tex       | docs/latex/
+.bib       | docs/latex/
+.csv       | data/{raw, interim, processed}/
+.parquet   | data/{raw, interim, processed}/
+.log       | logs/
+.png/.pdf  | output/figures/
+.tex (out) | output/latex/
+```
+
 ## Final Reminders
 
 1. **Academic rigor first**: Every claim needs validation
@@ -414,3 +523,5 @@ def clean_organization_name(name: str | None) -> str | None:
 5. **Log everything**: Replicability depends on complete logs
 6. **Follow patent matching pattern**: It worked well (95.4% accuracy)
 7. **Ask before breaking patterns**: If you need to deviate from established patterns, explain why
+8. **KEEP ROOT CLEAN**: Only 4 files allowed in root directory
+9. **Check file placement**: Use the checklist above for every new file
