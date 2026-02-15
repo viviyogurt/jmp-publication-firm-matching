@@ -1,0 +1,2225 @@
+{
+  "2021-04-08_2021-04-10": {
+    "start_date": "2021-04-08",
+    "end_date": "2021-04-10",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T16:58:31.272437"
+  },
+  "2021-04-11_2021-04-14": {
+    "start_date": "2021-04-11",
+    "end_date": "2021-04-14",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:00:01.915794"
+  },
+  "2021-04-15_2021-04-17": {
+    "start_date": "2021-04-15",
+    "end_date": "2021-04-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:03:27.523146"
+  },
+  "2021-04-18_2021-04-21": {
+    "start_date": "2021-04-18",
+    "end_date": "2021-04-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:04:50.097864"
+  },
+  "2021-05-06_2021-05-08": {
+    "start_date": "2021-05-06",
+    "end_date": "2021-05-08",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:12:25.340869"
+  },
+  "2021-05-09_2021-05-12": {
+    "start_date": "2021-05-09",
+    "end_date": "2021-05-12",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:13:51.167010"
+  },
+  "2021-05-27_2021-05-29": {
+    "start_date": "2021-05-27",
+    "end_date": "2021-05-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:22:30.600532"
+  },
+  "2021-05-30_2021-06-02": {
+    "start_date": "2021-05-30",
+    "end_date": "2021-06-02",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:24:02.021002"
+  },
+  "2021-06-03_2021-06-05": {
+    "start_date": "2021-06-03",
+    "end_date": "2021-06-05",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:27:49.775972"
+  },
+  "2021-06-06_2021-06-09": {
+    "start_date": "2021-06-06",
+    "end_date": "2021-06-09",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:29:18.320624"
+  },
+  "2021-06-10_2021-06-12": {
+    "start_date": "2021-06-10",
+    "end_date": "2021-06-12",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:32:35.924094"
+  },
+  "2021-06-13_2021-06-16": {
+    "start_date": "2021-06-13",
+    "end_date": "2021-06-16",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:33:58.370363"
+  },
+  "2021-06-17_2021-06-19": {
+    "start_date": "2021-06-17",
+    "end_date": "2021-06-19",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:37:11.913023"
+  },
+  "2021-06-20_2021-06-23": {
+    "start_date": "2021-06-20",
+    "end_date": "2021-06-23",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T17:38:32.077234"
+  },
+  "2021-09-09_2021-09-11": {
+    "start_date": "2021-09-09",
+    "end_date": "2021-09-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:06:42.968511"
+  },
+  "2021-09-12_2021-09-15": {
+    "start_date": "2021-09-12",
+    "end_date": "2021-09-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:08:16.294249"
+  },
+  "2021-09-23_2021-09-25": {
+    "start_date": "2021-09-23",
+    "end_date": "2021-09-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:13:50.569549"
+  },
+  "2021-09-26_2021-09-29": {
+    "start_date": "2021-09-26",
+    "end_date": "2021-09-29",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:15:16.971157"
+  },
+  "2021-09-30_2021-10-02": {
+    "start_date": "2021-09-30",
+    "end_date": "2021-10-02",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:18:35.677671"
+  },
+  "2021-10-03_2021-10-06": {
+    "start_date": "2021-10-03",
+    "end_date": "2021-10-06",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:19:59.257124"
+  },
+  "2021-10-07_2021-10-09": {
+    "start_date": "2021-10-07",
+    "end_date": "2021-10-09",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:23:32.946635"
+  },
+  "2021-10-10_2021-10-13": {
+    "start_date": "2021-10-10",
+    "end_date": "2021-10-13",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:25:09.868012"
+  },
+  "2021-10-14_2021-10-16": {
+    "start_date": "2021-10-14",
+    "end_date": "2021-10-16",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:28:42.867723"
+  },
+  "2021-10-17_2021-10-20": {
+    "start_date": "2021-10-17",
+    "end_date": "2021-10-20",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:30:05.350662"
+  },
+  "2021-10-21_2021-10-23": {
+    "start_date": "2021-10-21",
+    "end_date": "2021-10-23",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:33:47.276505"
+  },
+  "2021-10-24_2021-10-27": {
+    "start_date": "2021-10-24",
+    "end_date": "2021-10-27",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:35:25.692457"
+  },
+  "2021-10-28_2021-10-30": {
+    "start_date": "2021-10-28",
+    "end_date": "2021-10-30",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:38:44.308722"
+  },
+  "2021-10-31_2021-11-03": {
+    "start_date": "2021-10-31",
+    "end_date": "2021-11-03",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:40:06.786042"
+  },
+  "2021-11-25_2021-11-27": {
+    "start_date": "2021-11-25",
+    "end_date": "2021-11-27",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:50:08.071771"
+  },
+  "2021-11-28_2021-12-01": {
+    "start_date": "2021-11-28",
+    "end_date": "2021-12-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:51:42.470151"
+  },
+  "2021-12-02_2021-12-04": {
+    "start_date": "2021-12-02",
+    "end_date": "2021-12-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:54:57.495356"
+  },
+  "2021-12-05_2021-12-08": {
+    "start_date": "2021-12-05",
+    "end_date": "2021-12-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:56:20.679094"
+  },
+  "2021-12-09_2021-12-11": {
+    "start_date": "2021-12-09",
+    "end_date": "2021-12-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T18:59:53.951329"
+  },
+  "2021-12-12_2021-12-15": {
+    "start_date": "2021-12-12",
+    "end_date": "2021-12-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:01:43.843032"
+  },
+  "2021-12-16_2021-12-18": {
+    "start_date": "2021-12-16",
+    "end_date": "2021-12-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:05:23.486666"
+  },
+  "2021-12-19_2021-12-22": {
+    "start_date": "2021-12-19",
+    "end_date": "2021-12-22",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:06:55.246669"
+  },
+  "2022-01-27_2022-01-29": {
+    "start_date": "2022-01-27",
+    "end_date": "2022-01-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:21:31.579638"
+  },
+  "2022-01-30_2022-02-02": {
+    "start_date": "2022-01-30",
+    "end_date": "2022-02-02",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:22:57.030900"
+  },
+  "2022-02-10_2022-02-12": {
+    "start_date": "2022-02-10",
+    "end_date": "2022-02-12",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:29:25.482033"
+  },
+  "2022-02-13_2022-02-16": {
+    "start_date": "2022-02-13",
+    "end_date": "2022-02-16",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:31:00.872871"
+  },
+  "2022-02-24_2022-02-26": {
+    "start_date": "2022-02-24",
+    "end_date": "2022-02-26",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:37:15.981103"
+  },
+  "2022-02-27_2022-03-02": {
+    "start_date": "2022-02-27",
+    "end_date": "2022-03-02",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:38:42.353125"
+  },
+  "2022-03-03_2022-03-05": {
+    "start_date": "2022-03-03",
+    "end_date": "2022-03-05",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:42:10.672552"
+  },
+  "2022-03-06_2022-03-09": {
+    "start_date": "2022-03-06",
+    "end_date": "2022-03-09",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:43:39.013352"
+  },
+  "2022-03-10_2022-03-12": {
+    "start_date": "2022-03-10",
+    "end_date": "2022-03-12",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:47:24.543663"
+  },
+  "2022-03-13_2022-03-16": {
+    "start_date": "2022-03-13",
+    "end_date": "2022-03-16",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:49:02.178736"
+  },
+  "2022-03-17_2022-03-19": {
+    "start_date": "2022-03-17",
+    "end_date": "2022-03-19",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:52:46.039222"
+  },
+  "2022-03-20_2022-03-23": {
+    "start_date": "2022-03-20",
+    "end_date": "2022-03-23",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:54:16.932455"
+  },
+  "2022-03-24_2022-03-26": {
+    "start_date": "2022-03-24",
+    "end_date": "2022-03-26",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:57:52.005832"
+  },
+  "2022-03-27_2022-03-30": {
+    "start_date": "2022-03-27",
+    "end_date": "2022-03-30",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T19:59:29.217990"
+  },
+  "2022-05-19_2022-05-21": {
+    "start_date": "2022-05-19",
+    "end_date": "2022-05-21",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:22:38.082082"
+  },
+  "2022-05-22_2022-05-25": {
+    "start_date": "2022-05-22",
+    "end_date": "2022-05-25",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:24:23.463529"
+  },
+  "2022-05-26_2022-05-28": {
+    "start_date": "2022-05-26",
+    "end_date": "2022-05-28",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:28:05.500578"
+  },
+  "2022-05-29_2022-06-01": {
+    "start_date": "2022-05-29",
+    "end_date": "2022-06-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:29:47.357828"
+  },
+  "2022-06-09_2022-06-11": {
+    "start_date": "2022-06-09",
+    "end_date": "2022-06-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:35:37.502151"
+  },
+  "2022-06-12_2022-06-15": {
+    "start_date": "2022-06-12",
+    "end_date": "2022-06-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:36:58.003407"
+  },
+  "2022-06-16_2022-06-18": {
+    "start_date": "2022-06-16",
+    "end_date": "2022-06-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:41:08.914983"
+  },
+  "2022-06-23_2022-06-25": {
+    "start_date": "2022-06-23",
+    "end_date": "2022-06-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:44:58.671575"
+  },
+  "2022-06-26_2022-06-29": {
+    "start_date": "2022-06-26",
+    "end_date": "2022-06-29",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:46:21.968991"
+  },
+  "2022-06-30_2022-07-02": {
+    "start_date": "2022-06-30",
+    "end_date": "2022-07-02",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:49:56.055857"
+  },
+  "2022-07-03_2022-07-06": {
+    "start_date": "2022-07-03",
+    "end_date": "2022-07-06",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:51:21.101643"
+  },
+  "2022-07-07_2022-07-09": {
+    "start_date": "2022-07-07",
+    "end_date": "2022-07-09",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:54:44.706450"
+  },
+  "2022-07-10_2022-07-13": {
+    "start_date": "2022-07-10",
+    "end_date": "2022-07-13",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:56:26.506516"
+  },
+  "2022-07-14_2022-07-16": {
+    "start_date": "2022-07-14",
+    "end_date": "2022-07-16",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T20:59:59.563811"
+  },
+  "2022-07-17_2022-07-20": {
+    "start_date": "2022-07-17",
+    "end_date": "2022-07-20",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:01:53.676499"
+  },
+  "2022-07-21_2022-07-23": {
+    "start_date": "2022-07-21",
+    "end_date": "2022-07-23",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:05:27.496841"
+  },
+  "2022-07-24_2022-07-27": {
+    "start_date": "2022-07-24",
+    "end_date": "2022-07-27",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:07:05.458273"
+  },
+  "2022-09-15_2022-09-17": {
+    "start_date": "2022-09-15",
+    "end_date": "2022-09-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:27:46.206134"
+  },
+  "2022-09-18_2022-09-21": {
+    "start_date": "2022-09-18",
+    "end_date": "2022-09-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:29:20.521303"
+  },
+  "2022-09-22_2022-09-24": {
+    "start_date": "2022-09-22",
+    "end_date": "2022-09-24",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:32:54.826059"
+  },
+  "2022-09-25_2022-09-28": {
+    "start_date": "2022-09-25",
+    "end_date": "2022-09-28",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:34:29.621217"
+  },
+  "2022-09-29_2022-10-01": {
+    "start_date": "2022-09-29",
+    "end_date": "2022-10-01",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:38:11.444178"
+  },
+  "2022-10-02_2022-10-05": {
+    "start_date": "2022-10-02",
+    "end_date": "2022-10-05",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:39:41.995376"
+  },
+  "2022-10-06_2022-10-08": {
+    "start_date": "2022-10-06",
+    "end_date": "2022-10-08",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:43:33.167986"
+  },
+  "2022-10-09_2022-10-12": {
+    "start_date": "2022-10-09",
+    "end_date": "2022-10-12",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:45:05.898511"
+  },
+  "2022-10-13_2022-10-15": {
+    "start_date": "2022-10-13",
+    "end_date": "2022-10-15",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:49:01.272828"
+  },
+  "2022-10-16_2022-10-19": {
+    "start_date": "2022-10-16",
+    "end_date": "2022-10-19",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:50:38.169794"
+  },
+  "2022-10-20_2022-10-22": {
+    "start_date": "2022-10-20",
+    "end_date": "2022-10-22",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:54:51.909398"
+  },
+  "2022-10-23_2022-10-26": {
+    "start_date": "2022-10-23",
+    "end_date": "2022-10-26",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T21:56:31.422395"
+  },
+  "2022-10-27_2022-10-29": {
+    "start_date": "2022-10-27",
+    "end_date": "2022-10-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:00:20.051686"
+  },
+  "2022-10-30_2022-11-02": {
+    "start_date": "2022-10-30",
+    "end_date": "2022-11-02",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:02:05.591757"
+  },
+  "2022-11-03_2022-11-05": {
+    "start_date": "2022-11-03",
+    "end_date": "2022-11-05",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:06:14.835089"
+  },
+  "2022-11-06_2022-11-09": {
+    "start_date": "2022-11-06",
+    "end_date": "2022-11-09",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:07:55.648804"
+  },
+  "2022-11-10_2022-11-12": {
+    "start_date": "2022-11-10",
+    "end_date": "2022-11-12",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:11:37.149732"
+  },
+  "2022-11-13_2022-11-16": {
+    "start_date": "2022-11-13",
+    "end_date": "2022-11-16",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:13:09.703669"
+  },
+  "2022-11-17_2022-11-19": {
+    "start_date": "2022-11-17",
+    "end_date": "2022-11-19",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:16:54.962398"
+  },
+  "2022-11-20_2022-11-23": {
+    "start_date": "2022-11-20",
+    "end_date": "2022-11-23",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:18:34.911465"
+  },
+  "2022-11-24_2022-11-26": {
+    "start_date": "2022-11-24",
+    "end_date": "2022-11-26",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:23:22.829603"
+  },
+  "2022-11-27_2022-11-30": {
+    "start_date": "2022-11-27",
+    "end_date": "2022-11-30",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:25:11.705834"
+  },
+  "2022-12-01_2022-12-03": {
+    "start_date": "2022-12-01",
+    "end_date": "2022-12-03",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:28:54.532875"
+  },
+  "2022-12-04_2022-12-07": {
+    "start_date": "2022-12-04",
+    "end_date": "2022-12-07",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:30:32.990233"
+  },
+  "2022-12-08_2022-12-10": {
+    "start_date": "2022-12-08",
+    "end_date": "2022-12-10",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:34:08.291763"
+  },
+  "2022-12-11_2022-12-14": {
+    "start_date": "2022-12-11",
+    "end_date": "2022-12-14",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:35:42.314442"
+  },
+  "2022-12-15_2022-12-17": {
+    "start_date": "2022-12-15",
+    "end_date": "2022-12-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:39:18.265244"
+  },
+  "2022-12-18_2022-12-21": {
+    "start_date": "2022-12-18",
+    "end_date": "2022-12-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:41:01.082717"
+  },
+  "2023-01-26_2023-01-28": {
+    "start_date": "2023-01-26",
+    "end_date": "2023-01-28",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:54:46.583904"
+  },
+  "2023-01-29_2023-02-01": {
+    "start_date": "2023-01-29",
+    "end_date": "2023-02-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:56:18.362738"
+  },
+  "2023-02-02_2023-02-04": {
+    "start_date": "2023-02-02",
+    "end_date": "2023-02-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T22:59:59.564533"
+  },
+  "2023-02-05_2023-02-08": {
+    "start_date": "2023-02-05",
+    "end_date": "2023-02-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:01:46.242787"
+  },
+  "2023-02-09_2023-02-11": {
+    "start_date": "2023-02-09",
+    "end_date": "2023-02-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:05:17.815435"
+  },
+  "2023-02-12_2023-02-15": {
+    "start_date": "2023-02-12",
+    "end_date": "2023-02-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:06:42.361182"
+  },
+  "2023-02-16_2023-02-18": {
+    "start_date": "2023-02-16",
+    "end_date": "2023-02-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:10:03.237900"
+  },
+  "2023-02-19_2023-02-22": {
+    "start_date": "2023-02-19",
+    "end_date": "2023-02-22",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:11:25.902760"
+  },
+  "2023-02-23_2023-02-25": {
+    "start_date": "2023-02-23",
+    "end_date": "2023-02-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:15:09.191900"
+  },
+  "2023-02-26_2023-03-01": {
+    "start_date": "2023-02-26",
+    "end_date": "2023-03-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:16:48.605295"
+  },
+  "2023-03-02_2023-03-04": {
+    "start_date": "2023-03-02",
+    "end_date": "2023-03-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:20:40.305316"
+  },
+  "2023-03-05_2023-03-08": {
+    "start_date": "2023-03-05",
+    "end_date": "2023-03-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:22:14.330803"
+  },
+  "2023-03-09_2023-03-11": {
+    "start_date": "2023-03-09",
+    "end_date": "2023-03-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:26:28.587104"
+  },
+  "2023-03-12_2023-03-15": {
+    "start_date": "2023-03-12",
+    "end_date": "2023-03-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:28:01.410568"
+  },
+  "2023-03-16_2023-03-18": {
+    "start_date": "2023-03-16",
+    "end_date": "2023-03-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:31:41.813127"
+  },
+  "2023-03-19_2023-03-22": {
+    "start_date": "2023-03-19",
+    "end_date": "2023-03-22",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:33:13.849507"
+  },
+  "2023-03-23_2023-03-25": {
+    "start_date": "2023-03-23",
+    "end_date": "2023-03-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:37:08.511232"
+  },
+  "2023-03-26_2023-03-29": {
+    "start_date": "2023-03-26",
+    "end_date": "2023-03-29",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:38:47.843861"
+  },
+  "2023-03-30_2023-04-01": {
+    "start_date": "2023-03-30",
+    "end_date": "2023-04-01",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:42:28.225264"
+  },
+  "2023-04-02_2023-04-05": {
+    "start_date": "2023-04-02",
+    "end_date": "2023-04-05",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:43:56.401407"
+  },
+  "2023-04-13_2023-04-15": {
+    "start_date": "2023-04-13",
+    "end_date": "2023-04-15",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:50:20.077915"
+  },
+  "2023-04-16_2023-04-19": {
+    "start_date": "2023-04-16",
+    "end_date": "2023-04-19",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:51:57.937082"
+  },
+  "2023-04-20_2023-04-22": {
+    "start_date": "2023-04-20",
+    "end_date": "2023-04-22",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:55:19.222039"
+  },
+  "2023-04-23_2023-04-26": {
+    "start_date": "2023-04-23",
+    "end_date": "2023-04-26",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-07T23:56:56.159398"
+  },
+  "2023-04-27_2023-04-29": {
+    "start_date": "2023-04-27",
+    "end_date": "2023-04-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:00:15.986624"
+  },
+  "2023-05-25_2023-05-27": {
+    "start_date": "2023-05-25",
+    "end_date": "2023-05-27",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:14:50.262443"
+  },
+  "2023-05-28_2023-05-31": {
+    "start_date": "2023-05-28",
+    "end_date": "2023-05-31",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:16:35.562106"
+  },
+  "2023-06-01_2023-06-03": {
+    "start_date": "2023-06-01",
+    "end_date": "2023-06-03",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:20:52.603817"
+  },
+  "2023-06-04_2023-06-07": {
+    "start_date": "2023-06-04",
+    "end_date": "2023-06-07",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:22:37.910099"
+  },
+  "2023-06-08_2023-06-10": {
+    "start_date": "2023-06-08",
+    "end_date": "2023-06-10",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:26:14.763042"
+  },
+  "2023-06-11_2023-06-14": {
+    "start_date": "2023-06-11",
+    "end_date": "2023-06-14",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:27:40.600832"
+  },
+  "2023-06-15_2023-06-17": {
+    "start_date": "2023-06-15",
+    "end_date": "2023-06-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:31:37.482286"
+  },
+  "2023-06-18_2023-06-21": {
+    "start_date": "2023-06-18",
+    "end_date": "2023-06-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:33:04.394464"
+  },
+  "2023-06-22_2023-06-24": {
+    "start_date": "2023-06-22",
+    "end_date": "2023-06-24",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:36:53.342827"
+  },
+  "2023-06-25_2023-06-28": {
+    "start_date": "2023-06-25",
+    "end_date": "2023-06-28",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:38:34.002951"
+  },
+  "2023-06-29_2023-07-01": {
+    "start_date": "2023-06-29",
+    "end_date": "2023-07-01",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:42:29.611985"
+  },
+  "2023-07-02_2023-07-05": {
+    "start_date": "2023-07-02",
+    "end_date": "2023-07-05",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:44:02.011847"
+  },
+  "2023-07-06_2023-07-08": {
+    "start_date": "2023-07-06",
+    "end_date": "2023-07-08",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:47:37.116787"
+  },
+  "2023-07-09_2023-07-12": {
+    "start_date": "2023-07-09",
+    "end_date": "2023-07-12",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:49:11.706510"
+  },
+  "2023-07-13_2023-07-15": {
+    "start_date": "2023-07-13",
+    "end_date": "2023-07-15",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:53:08.685893"
+  },
+  "2023-07-16_2023-07-19": {
+    "start_date": "2023-07-16",
+    "end_date": "2023-07-19",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:54:42.148684"
+  },
+  "2023-07-20_2023-07-22": {
+    "start_date": "2023-07-20",
+    "end_date": "2023-07-22",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:58:22.349190"
+  },
+  "2023-07-23_2023-07-26": {
+    "start_date": "2023-07-23",
+    "end_date": "2023-07-26",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T00:59:56.055681"
+  },
+  "2023-07-27_2023-07-29": {
+    "start_date": "2023-07-27",
+    "end_date": "2023-07-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:04:12.976650"
+  },
+  "2023-07-30_2023-08-02": {
+    "start_date": "2023-07-30",
+    "end_date": "2023-08-02",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:05:44.306789"
+  },
+  "2023-08-03_2023-08-05": {
+    "start_date": "2023-08-03",
+    "end_date": "2023-08-05",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:09:12.425938"
+  },
+  "2023-08-06_2023-08-09": {
+    "start_date": "2023-08-06",
+    "end_date": "2023-08-09",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:10:43.921916"
+  },
+  "2023-08-17_2023-08-19": {
+    "start_date": "2023-08-17",
+    "end_date": "2023-08-19",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:16:53.718905"
+  },
+  "2023-08-20_2023-08-23": {
+    "start_date": "2023-08-20",
+    "end_date": "2023-08-23",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:18:22.068349"
+  },
+  "2023-08-24_2023-08-26": {
+    "start_date": "2023-08-24",
+    "end_date": "2023-08-26",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:21:54.610511"
+  },
+  "2023-08-27_2023-08-30": {
+    "start_date": "2023-08-27",
+    "end_date": "2023-08-30",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:23:30.704046"
+  },
+  "2023-08-31_2023-09-02": {
+    "start_date": "2023-08-31",
+    "end_date": "2023-09-02",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:27:16.229876"
+  },
+  "2023-09-03_2023-09-06": {
+    "start_date": "2023-09-03",
+    "end_date": "2023-09-06",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:28:50.681287"
+  },
+  "2023-09-07_2023-09-09": {
+    "start_date": "2023-09-07",
+    "end_date": "2023-09-09",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:32:26.450316"
+  },
+  "2023-09-10_2023-09-13": {
+    "start_date": "2023-09-10",
+    "end_date": "2023-09-13",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:34:02.967317"
+  },
+  "2023-09-14_2023-09-16": {
+    "start_date": "2023-09-14",
+    "end_date": "2023-09-16",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:38:01.136170"
+  },
+  "2023-09-17_2023-09-20": {
+    "start_date": "2023-09-17",
+    "end_date": "2023-09-20",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:39:51.658437"
+  },
+  "2023-09-21_2023-09-23": {
+    "start_date": "2023-09-21",
+    "end_date": "2023-09-23",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:43:58.384098"
+  },
+  "2023-09-24_2023-09-27": {
+    "start_date": "2023-09-24",
+    "end_date": "2023-09-27",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:45:40.157431"
+  },
+  "2023-09-28_2023-09-30": {
+    "start_date": "2023-09-28",
+    "end_date": "2023-09-30",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:49:57.718702"
+  },
+  "2023-10-01_2023-10-04": {
+    "start_date": "2023-10-01",
+    "end_date": "2023-10-04",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:51:40.422895"
+  },
+  "2023-10-05_2023-10-07": {
+    "start_date": "2023-10-05",
+    "end_date": "2023-10-07",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:55:52.393294"
+  },
+  "2023-10-08_2023-10-11": {
+    "start_date": "2023-10-08",
+    "end_date": "2023-10-11",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T01:57:42.863836"
+  },
+  "2023-10-12_2023-10-14": {
+    "start_date": "2023-10-12",
+    "end_date": "2023-10-14",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:01:54.551027"
+  },
+  "2023-10-15_2023-10-18": {
+    "start_date": "2023-10-15",
+    "end_date": "2023-10-18",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:03:35.316835"
+  },
+  "2023-10-19_2023-10-21": {
+    "start_date": "2023-10-19",
+    "end_date": "2023-10-21",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:07:46.751747"
+  },
+  "2023-10-22_2023-10-25": {
+    "start_date": "2023-10-22",
+    "end_date": "2023-10-25",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:09:34.683116"
+  },
+  "2023-10-26_2023-10-28": {
+    "start_date": "2023-10-26",
+    "end_date": "2023-10-28",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:13:39.595869"
+  },
+  "2023-10-29_2023-11-01": {
+    "start_date": "2023-10-29",
+    "end_date": "2023-11-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:15:24.084081"
+  },
+  "2023-11-02_2023-11-04": {
+    "start_date": "2023-11-02",
+    "end_date": "2023-11-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:19:11.030961"
+  },
+  "2023-11-05_2023-11-08": {
+    "start_date": "2023-11-05",
+    "end_date": "2023-11-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:20:59.229513"
+  },
+  "2023-11-09_2023-11-11": {
+    "start_date": "2023-11-09",
+    "end_date": "2023-11-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:25:36.821122"
+  },
+  "2023-11-12_2023-11-15": {
+    "start_date": "2023-11-12",
+    "end_date": "2023-11-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:27:25.694731"
+  },
+  "2023-11-16_2023-11-18": {
+    "start_date": "2023-11-16",
+    "end_date": "2023-11-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:31:23.244004"
+  },
+  "2023-11-19_2023-11-22": {
+    "start_date": "2023-11-19",
+    "end_date": "2023-11-22",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:33:00.123241"
+  },
+  "2023-11-23_2023-11-25": {
+    "start_date": "2023-11-23",
+    "end_date": "2023-11-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:36:57.465731"
+  },
+  "2023-11-26_2023-11-29": {
+    "start_date": "2023-11-26",
+    "end_date": "2023-11-29",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:38:56.480416"
+  },
+  "2023-11-30_2023-12-02": {
+    "start_date": "2023-11-30",
+    "end_date": "2023-12-02",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:43:08.618536"
+  },
+  "2023-12-03_2023-12-06": {
+    "start_date": "2023-12-03",
+    "end_date": "2023-12-06",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:45:04.004493"
+  },
+  "2023-12-07_2023-12-09": {
+    "start_date": "2023-12-07",
+    "end_date": "2023-12-09",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:49:26.411025"
+  },
+  "2023-12-10_2023-12-13": {
+    "start_date": "2023-12-10",
+    "end_date": "2023-12-13",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:51:18.012429"
+  },
+  "2023-12-14_2023-12-16": {
+    "start_date": "2023-12-14",
+    "end_date": "2023-12-16",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:56:02.006981"
+  },
+  "2023-12-17_2023-12-20": {
+    "start_date": "2023-12-17",
+    "end_date": "2023-12-20",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T02:57:54.425582"
+  },
+  "2024-01-04_2024-01-06": {
+    "start_date": "2024-01-04",
+    "end_date": "2024-01-06",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:05:46.074132"
+  },
+  "2024-01-07_2024-01-10": {
+    "start_date": "2024-01-07",
+    "end_date": "2024-01-10",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:07:13.518680"
+  },
+  "2024-01-11_2024-01-13": {
+    "start_date": "2024-01-11",
+    "end_date": "2024-01-13",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:10:57.682714"
+  },
+  "2024-01-14_2024-01-17": {
+    "start_date": "2024-01-14",
+    "end_date": "2024-01-17",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:12:32.615129"
+  },
+  "2024-01-18_2024-01-20": {
+    "start_date": "2024-01-18",
+    "end_date": "2024-01-20",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:16:23.397943"
+  },
+  "2024-01-21_2024-01-24": {
+    "start_date": "2024-01-21",
+    "end_date": "2024-01-24",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:18:01.600085"
+  },
+  "2024-01-25_2024-01-27": {
+    "start_date": "2024-01-25",
+    "end_date": "2024-01-27",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:22:13.095233"
+  },
+  "2024-01-28_2024-01-31": {
+    "start_date": "2024-01-28",
+    "end_date": "2024-01-31",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:24:08.153112"
+  },
+  "2024-02-01_2024-02-03": {
+    "start_date": "2024-02-01",
+    "end_date": "2024-02-03",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:28:48.358505"
+  },
+  "2024-02-04_2024-02-07": {
+    "start_date": "2024-02-04",
+    "end_date": "2024-02-07",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:30:49.710727"
+  },
+  "2024-02-08_2024-02-10": {
+    "start_date": "2024-02-08",
+    "end_date": "2024-02-10",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:34:43.829274"
+  },
+  "2024-02-11_2024-02-14": {
+    "start_date": "2024-02-11",
+    "end_date": "2024-02-14",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:36:18.914921"
+  },
+  "2024-02-15_2024-02-17": {
+    "start_date": "2024-02-15",
+    "end_date": "2024-02-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:40:37.773821"
+  },
+  "2024-02-18_2024-02-21": {
+    "start_date": "2024-02-18",
+    "end_date": "2024-02-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:42:22.973934"
+  },
+  "2024-02-22_2024-02-24": {
+    "start_date": "2024-02-22",
+    "end_date": "2024-02-24",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:46:51.097766"
+  },
+  "2024-02-25_2024-02-28": {
+    "start_date": "2024-02-25",
+    "end_date": "2024-02-28",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:48:46.721239"
+  },
+  "2024-02-29_2024-03-02": {
+    "start_date": "2024-02-29",
+    "end_date": "2024-03-02",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:53:27.437255"
+  },
+  "2024-03-03_2024-03-06": {
+    "start_date": "2024-03-03",
+    "end_date": "2024-03-06",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:55:14.606068"
+  },
+  "2024-03-07_2024-03-09": {
+    "start_date": "2024-03-07",
+    "end_date": "2024-03-09",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T03:59:43.689344"
+  },
+  "2024-03-10_2024-03-13": {
+    "start_date": "2024-03-10",
+    "end_date": "2024-03-13",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:01:42.035654"
+  },
+  "2024-03-14_2024-03-16": {
+    "start_date": "2024-03-14",
+    "end_date": "2024-03-16",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:06:30.982114"
+  },
+  "2024-03-17_2024-03-20": {
+    "start_date": "2024-03-17",
+    "end_date": "2024-03-20",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:08:29.274545"
+  },
+  "2024-03-28_2024-03-30": {
+    "start_date": "2024-03-28",
+    "end_date": "2024-03-30",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:17:02.047886"
+  },
+  "2024-03-31_2024-04-03": {
+    "start_date": "2024-03-31",
+    "end_date": "2024-04-03",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:18:38.316993"
+  },
+  "2024-04-04_2024-04-06": {
+    "start_date": "2024-04-04",
+    "end_date": "2024-04-06",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:22:27.115290"
+  },
+  "2024-04-07_2024-04-10": {
+    "start_date": "2024-04-07",
+    "end_date": "2024-04-10",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:24:13.602255"
+  },
+  "2024-04-11_2024-04-13": {
+    "start_date": "2024-04-11",
+    "end_date": "2024-04-13",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:28:27.825544"
+  },
+  "2024-04-14_2024-04-17": {
+    "start_date": "2024-04-14",
+    "end_date": "2024-04-17",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:30:17.472967"
+  },
+  "2024-04-18_2024-04-20": {
+    "start_date": "2024-04-18",
+    "end_date": "2024-04-20",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:34:31.904816"
+  },
+  "2024-04-21_2024-04-24": {
+    "start_date": "2024-04-21",
+    "end_date": "2024-04-24",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:36:14.495366"
+  },
+  "2024-04-25_2024-04-27": {
+    "start_date": "2024-04-25",
+    "end_date": "2024-04-27",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:40:17.628422"
+  },
+  "2024-04-28_2024-05-01": {
+    "start_date": "2024-04-28",
+    "end_date": "2024-05-01",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:42:03.792873"
+  },
+  "2024-05-02_2024-05-04": {
+    "start_date": "2024-05-02",
+    "end_date": "2024-05-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:46:14.406693"
+  },
+  "2024-05-05_2024-05-08": {
+    "start_date": "2024-05-05",
+    "end_date": "2024-05-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:48:01.876546"
+  },
+  "2024-05-09_2024-05-11": {
+    "start_date": "2024-05-09",
+    "end_date": "2024-05-11",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:51:57.312862"
+  },
+  "2024-05-12_2024-05-15": {
+    "start_date": "2024-05-12",
+    "end_date": "2024-05-15",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:53:49.868188"
+  },
+  "2024-05-16_2024-05-18": {
+    "start_date": "2024-05-16",
+    "end_date": "2024-05-18",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:57:55.503880"
+  },
+  "2024-05-19_2024-05-22": {
+    "start_date": "2024-05-19",
+    "end_date": "2024-05-22",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T04:59:35.975164"
+  },
+  "2024-05-23_2024-05-25": {
+    "start_date": "2024-05-23",
+    "end_date": "2024-05-25",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:05:21.840275"
+  },
+  "2024-05-26_2024-05-29": {
+    "start_date": "2024-05-26",
+    "end_date": "2024-05-29",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:07:34.362274"
+  },
+  "2024-05-30_2024-06-01": {
+    "start_date": "2024-05-30",
+    "end_date": "2024-06-01",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:12:25.357465"
+  },
+  "2024-06-02_2024-06-05": {
+    "start_date": "2024-06-02",
+    "end_date": "2024-06-05",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:17:57.560981"
+  },
+  "2024-06-06_2024-06-08": {
+    "start_date": "2024-06-06",
+    "end_date": "2024-06-08",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:22:45.181518"
+  },
+  "2024-06-09_2024-06-12": {
+    "start_date": "2024-06-09",
+    "end_date": "2024-06-12",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:24:37.654992"
+  },
+  "2024-06-13_2024-06-15": {
+    "start_date": "2024-06-13",
+    "end_date": "2024-06-15",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:29:26.409834"
+  },
+  "2024-06-16_2024-06-19": {
+    "start_date": "2024-06-16",
+    "end_date": "2024-06-19",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:31:26.142572"
+  },
+  "2024-06-20_2024-06-22": {
+    "start_date": "2024-06-20",
+    "end_date": "2024-06-22",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:35:48.582180"
+  },
+  "2024-06-23_2024-06-26": {
+    "start_date": "2024-06-23",
+    "end_date": "2024-06-26",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:37:37.569238"
+  },
+  "2024-06-27_2024-06-29": {
+    "start_date": "2024-06-27",
+    "end_date": "2024-06-29",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:42:00.787754"
+  },
+  "2024-06-30_2024-07-03": {
+    "start_date": "2024-06-30",
+    "end_date": "2024-07-03",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:43:57.173324"
+  },
+  "2024-07-04_2024-07-06": {
+    "start_date": "2024-07-04",
+    "end_date": "2024-07-06",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:48:23.745625"
+  },
+  "2024-07-07_2024-07-10": {
+    "start_date": "2024-07-07",
+    "end_date": "2024-07-10",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:50:16.034331"
+  },
+  "2024-07-11_2024-07-13": {
+    "start_date": "2024-07-11",
+    "end_date": "2024-07-13",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:54:40.454825"
+  },
+  "2024-07-14_2024-07-17": {
+    "start_date": "2024-07-14",
+    "end_date": "2024-07-17",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T05:56:32.149736"
+  },
+  "2024-07-18_2024-07-20": {
+    "start_date": "2024-07-18",
+    "end_date": "2024-07-20",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:01:14.549496"
+  },
+  "2024-07-21_2024-07-24": {
+    "start_date": "2024-07-21",
+    "end_date": "2024-07-24",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:03:15.408863"
+  },
+  "2024-08-08_2024-08-10": {
+    "start_date": "2024-08-08",
+    "end_date": "2024-08-10",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:13:33.241951"
+  },
+  "2024-08-11_2024-08-14": {
+    "start_date": "2024-08-11",
+    "end_date": "2024-08-14",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:14:52.384296"
+  },
+  "2024-08-15_2024-08-17": {
+    "start_date": "2024-08-15",
+    "end_date": "2024-08-17",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:18:30.516228"
+  },
+  "2024-08-18_2024-08-21": {
+    "start_date": "2024-08-18",
+    "end_date": "2024-08-21",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:20:10.281261"
+  },
+  "2024-08-22_2024-08-24": {
+    "start_date": "2024-08-22",
+    "end_date": "2024-08-24",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:24:04.259074"
+  },
+  "2024-08-25_2024-08-28": {
+    "start_date": "2024-08-25",
+    "end_date": "2024-08-28",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:25:42.757404"
+  },
+  "2024-08-29_2024-08-31": {
+    "start_date": "2024-08-29",
+    "end_date": "2024-08-31",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T06:29:55.983558"
+  },
+  "2025-01-02_2025-01-04": {
+    "start_date": "2025-01-02",
+    "end_date": "2025-01-04",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T07:29:45.078244"
+  },
+  "2025-01-05_2025-01-08": {
+    "start_date": "2025-01-05",
+    "end_date": "2025-01-08",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T07:35:55.314934"
+  },
+  "2025-03-13_2025-03-15": {
+    "start_date": "2025-03-13",
+    "end_date": "2025-03-15",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T08:18:26.414105"
+  },
+  "2025-03-16_2025-03-19": {
+    "start_date": "2025-03-16",
+    "end_date": "2025-03-19",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T08:20:40.838800"
+  },
+  "2025-04-24_2025-04-26": {
+    "start_date": "2025-04-24",
+    "end_date": "2025-04-26",
+    "paper_count": 0,
+    "total_expected": 1800,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T08:53:36.078027"
+  },
+  "2025-04-27_2025-04-30": {
+    "start_date": "2025-04-27",
+    "end_date": "2025-04-30",
+    "paper_count": 0,
+    "total_expected": 2400,
+    "completeness_ratio": 0.0,
+    "complete": true,
+    "timestamp": "2026-01-08T08:55:27.487417"
+  }
+}

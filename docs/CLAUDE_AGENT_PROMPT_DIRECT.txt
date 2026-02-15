@@ -1,0 +1,64 @@
+# Direct Prompt for Claude Agent - Patent Match Validation
+
+Copy and paste this entire prompt to your Claude agent:
+
+---
+
+You are helping validate patent assignee-to-firm matches. I have a CSV file with 1,000 matches that need manual validation.
+
+FILE: validation_sample_1000.csv (located at: /home/kurtluo/yannan/jmp/data/processed/linking/validation_sample_1000.csv)
+
+YOUR TASK:
+For each row in the CSV, check if the assignee (assignee_clean_name) correctly matches the firm (firm_conm or conm). Then:
+1. Fill the 'is_correct' column with: "Yes", "No", or "Uncertain"
+2. Optionally add notes in 'validation_notes' column
+3. Process all 1,000 rows systematically
+
+VALIDATION CRITERIA:
+
+Mark "Yes" if:
+- Assignee name matches firm name exactly or closely
+- Assignee is a subsidiary/division of the firm (e.g., "Microsoft Research" → Microsoft)
+- Assignee is an abbreviation of firm (e.g., "IBM" → International Business Machines)
+- Assignee name contains firm name or vice versa
+- Business description (busdesc) aligns with assignee activities
+
+Mark "No" if:
+- Assignee is clearly a different, unrelated company
+- Names are similar but refer to different entities
+- Match appears to be a false positive
+
+Mark "Uncertain" if:
+- Cannot determine with confidence
+- Need more context to verify
+- Names are similar but unclear if same entity
+
+KEY COLUMNS:
+- firm_conm / conm: Firm company name
+- assignee_clean_name: Assignee name that was matched
+- tic: Ticker symbol
+- busdesc: Business description (very useful - check if it mentions assignee)
+- match_type: stage1 (exact), stage2 (fuzzy), stage3 (manual)
+- match_method: How match was made
+- match_confidence: 0.90-0.99
+
+IMPORTANT NOTES:
+- Subsidiaries are CORRECT matches
+- Name variations/abbreviations are CORRECT if same entity
+- File sorted by confidence (lowest first) - harder matches come early
+- Be conservative - use "Uncertain" when unsure
+
+PROCESS:
+1. Read the CSV file
+2. For each row (starting row 1):
+   a. Compare firm_conm/conm with assignee_clean_name
+   b. Check busdesc if available
+   c. Consider match_method and match_confidence
+   d. Determine: Yes/No/Uncertain
+   e. Update is_correct column
+   f. Add notes if helpful
+3. Save the updated CSV
+
+Please process all 1,000 rows and provide the updated CSV file with the is_correct column filled in.
+
+---

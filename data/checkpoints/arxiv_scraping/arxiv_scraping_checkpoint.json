@@ -1,0 +1,9 @@
+{
+  "last_processed_date": "2025-12-31T00:00:00",
+  "total_papers_fetched": 533659,
+  "last_checkpoint_time": "2026-01-08T10:30:24.475594",
+  "status": "completed",
+  "error": "could not append value: \"10.3847/2041-8213/ae060a\" of type: str to the builder; make sure that all rows have the same schema or consider increasing `infer_schema_length`\n\nit might also be that a value overflows the data-type's capacity",
+  "error_time": "2026-01-07T16:29:05.894987",
+  "completion_time": "2026-01-08T10:30:38.741803"
+}

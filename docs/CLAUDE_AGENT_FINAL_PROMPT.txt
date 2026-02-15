@@ -1,0 +1,88 @@
+# FINAL PROMPT FOR CLAUDE AGENT - Patent Match Validation
+
+Copy this entire prompt to your Claude agent:
+
+========================================
+
+You are validating 1,000 patent assignee-to-firm matches. Your task is to check if each assignee correctly matches its CRSP/Compustat firm.
+
+CSV FILE: /home/kurtluo/yannan/jmp/data/processed/linking/validation_sample_1000.csv
+
+TASK:
+For each of the 1,000 rows, determine if the match is correct and fill the 'is_correct' column with:
+- "Yes" if correct match
+- "No" if incorrect match  
+- "Uncertain" if cannot determine
+
+HOW TO VALIDATE EACH ROW:
+
+1. Read these columns:
+   - firm_conm or conm: The firm's company name
+   - assignee_clean_name: The assignee name that was matched
+   - busdesc: Business description (VERY HELPFUL - check if it mentions assignee activities)
+   - match_method: How the match was made
+   - match_confidence: 0.90-0.99 (higher = more confident)
+
+2. Compare the names:
+   - Same or very similar? → Likely "Yes"
+   - Assignee contains firm name? (e.g., "Microsoft Research" contains "Microsoft") → "Yes"
+   - Assignee is abbreviation? (e.g., "IBM" for "International Business Machines") → "Yes"
+   - Completely different? → "No"
+   - Similar but unclear? → "Uncertain"
+
+3. Check business description (busdesc):
+   - Does it mention activities related to assignee? → Supports "Yes"
+   - Does it contradict? → Supports "No"
+   - Unclear or missing? → Check other factors
+
+4. Consider match method:
+   - "exact_conm", "exact_conml" → Usually "Yes"
+   - "ticker_in_name" → Usually "Yes" (assignee contains ticker)
+   - "firm_contained_conm" → Usually "Yes" (firm name in assignee)
+   - "fuzzy_jw_high" (confidence ≥0.94) → Usually "Yes" but verify
+   - "fuzzy_jw_medium" (confidence 0.90-0.94) → Check carefully, may be "Uncertain" or "No"
+
+VALIDATION RULES:
+
+✅ Mark "Yes" if:
+- Names match exactly or closely
+- Assignee is subsidiary/division (e.g., "Microsoft Research" → Microsoft)
+- Assignee is abbreviation (e.g., "IBM" → International Business Machines)
+- Assignee name contains firm name
+- Business description aligns with assignee
+
+❌ Mark "No" if:
+- Assignee is clearly different company
+- Names similar but unrelated entities
+- Business description contradicts
+- False positive from fuzzy matching
+
+❓ Mark "Uncertain" if:
+- Cannot determine with confidence
+- Need more context
+- Names similar but unclear if same entity
+
+IMPORTANT:
+- Subsidiaries/divisions are CORRECT matches
+- Name variations are CORRECT if same entity
+- Be conservative - use "Uncertain" when unsure
+- File sorted by confidence (lowest first) - harder matches early
+
+EXAMPLES:
+
+Example 1: "MICROSOFT CORP" → "MICROSOFT" (exact_conm, 0.98) = Yes
+Example 2: "MICROSOFT CORP" → "MICROSOFT RESEARCH" (firm_contained_conm, 0.96) = Yes
+Example 3: "INTERNATIONAL BUSINESS MACHINES" → "IBM" (abbreviation, 0.95) = Yes
+Example 4: "SUMMA INDUSTRIES" → "UMC INDUSTRIES" (fuzzy_jw_medium, 0.9) = Check busdesc, likely No or Uncertain
+Example 5: "ERO INC" → "ERNO" (fuzzy_jw_medium, 0.9) = Check busdesc, if mentions ERO activities = Yes
+
+PROCESS:
+1. Load the CSV file
+2. Process each row (1-1000) systematically
+3. For each row, make your determination and update 'is_correct'
+4. Optionally add brief notes in 'validation_notes' (e.g., "subsidiary", "name variation", "false positive")
+5. Save the updated CSV
+
+Please validate all 1,000 rows and provide the updated CSV file with the 'is_correct' column filled in.
+
+========================================
