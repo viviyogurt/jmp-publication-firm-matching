@@ -134,9 +134,50 @@ Create/update docs in `docs/` for:
 - Figures: PNG (600 DPI minimum)
 - Include descriptive filenames (e.g., `fig1_big_tech_trends.png`)
 
-### 6. Research Rigor Requirements
+### 6. Version Control and Automatic Commits
 
-#### 6.1 Validation
+#### 6.1 Automatic Git Commits on Code Changes
+**IMPORTANT:** Every time you edit or create code files, you MUST commit the changes to git.
+
+**Using the `/commit` skill:**
+```
+/commit "message describing the change"
+```
+
+**Examples:**
+- After editing a script: `/commit "Fix bug in ticker matching logic"`
+- After creating new file: `/commit "Add optimized publication matching script"`
+- After fixing issues: `/commit "Resolve timeout issue in Stage 2 matching"`
+
+**When to commit:**
+- ✅ After ANY code edit (Edit tool usage)
+- ✅ After ANY file creation (Write tool usage)
+- ✅ After fixing bugs or errors
+- ✅ After completing features
+- ❌ NOT needed for just reading files
+
+**Commit message format:**
+```
+Short description (50 chars or less)
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+```
+
+**Manual git commands (if /commit not available):**
+```bash
+git add path/to/file.py
+git commit -m "Description of changes"
+```
+
+**Verification:**
+```bash
+git log --oneline -5  # Check recent commits
+git status            # Check uncommitted changes
+```
+
+### 7. Research Rigor Requirements
+
+#### 7.1 Validation
 - **ALL matching requires validation**:
   - Stage 1 (exact): 100% accuracy expected
   - Stage 2 (fuzzy): Validate minimum 1,000 random samples
@@ -206,6 +247,7 @@ Stage 7: Validation (TODO - validate_publication_matches.py)
 
 ### 8. Quality Checklist Before Committing
 
+- [ ] **Git commit created** (use `/commit` or `git commit` command)
 - [ ] Script runs end-to-end without errors
 - [ ] Log file created in `logs/`
 - [ ] Output file in correct directory (`data/interim/` or `data/processed/`)
@@ -216,6 +258,11 @@ Stage 7: Validation (TODO - validate_publication_matches.py)
 - [ ] Type hints on all functions
 - [ ] Validation performed (if matching script)
 - [ ] Documentation updated in `docs/`
+
+**IMPORTANT:** Git commit is MANDATORY after any code changes! Use:
+```
+/commit "Brief description of changes"
+```
 
 ### 9. Existing Reference Code
 
