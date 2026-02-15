@@ -155,13 +155,13 @@ generate_message() {
 prompt_message() {
     local suggested=$1
 
-    # Display suggestion (with colors)
-    echo -e "${CYAN}Suggested commit message:${NC}"
-    echo -e "${GREEN}$suggested${NC}"
-    echo ""
+    # Display suggestion to stderr (with colors)
+    echo -e "${CYAN}Suggested commit message:${NC}" >&2
+    echo -e "${GREEN}$suggested${NC}" >&2
+    echo "" >&2
 
     read -p "Use this message? (Y/n/edit/q) " -n 1 -r response
-    echo ""
+    echo "" >&2
 
     case "$response" in
         [nN]*)
@@ -177,7 +177,7 @@ prompt_message() {
             echo "$edited"
             ;;
         [qQ]*)
-            echo -e "${YELLOW}Commit cancelled${NC}"
+            echo -e "${YELLOW}Commit cancelled${NC}" >&2
             exit 0
             ;;
         *)
