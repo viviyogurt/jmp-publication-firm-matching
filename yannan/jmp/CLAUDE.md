@@ -175,6 +175,76 @@ git log --oneline -5  # Check recent commits
 git status            # Check uncommitted changes
 ```
 
+#### 6.2 Backup and Recovery Strategy
+**Daily workflow:**
+1. **Start of day:** `git pull` (get latest changes)
+2. **During work:** Commit after each change
+3. **Before risky operations:** Create checkpoint
+   ```bash
+   git tag -a checkpoint-before-run -m "Checkpoint before running matching"
+   ```
+4. **End of day:** Push to GitHub
+   ```bash
+   git push
+   git push origin --tags  # Push tags too
+   ```
+
+**Recovery commands:**
+```bash
+# Undo last commit (keep changes)
+git reset --soft HEAD~1
+
+# Restore file from previous version
+git checkout HEAD~1 -- path/to/file.py
+
+# See history of all operations
+git reflog
+
+# Restore from specific commit
+git checkout abc1234
+```
+
+**For complete git workflow guide:** See `docs/git_workflow_best_practices.md`
+
+---
+**IMPORTANT:** Every time you edit or create code files, you MUST commit the changes to git.
+
+**Using the `/commit` skill:**
+```
+/commit "message describing the change"
+```
+
+**Examples:**
+- After editing a script: `/commit "Fix bug in ticker matching logic"`
+- After creating new file: `/commit "Add optimized publication matching script"`
+- After fixing issues: `/commit "Resolve timeout issue in Stage 2 matching"`
+
+**When to commit:**
+- ✅ After ANY code edit (Edit tool usage)
+- ✅ After ANY file creation (Write tool usage)
+- ✅ After fixing bugs or errors
+- ✅ After completing features
+- ❌ NOT needed for just reading files
+
+**Commit message format:**
+```
+Short description (50 chars or less)
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+```
+
+**Manual git commands (if /commit not available):**
+```bash
+git add path/to/file.py
+git commit -m "Description of changes"
+```
+
+**Verification:**
+```bash
+git log --oneline -5  # Check recent commits
+git status            # Check uncommitted changes
+```
+
 ### 7. Research Rigor Requirements
 
 #### 7.1 Validation
