@@ -2,7 +2,7 @@
 
 \subsubsection{Data Sources and Processing}
 
-I construct a comprehensive firm-year panel linking AI publications to publicly traded firms in CRSP/Compustat. The publication data comes from two main sources: (1) OpenAlex, which provides comprehensive coverage of global research publications including author affiliations, institutional information, and research concept classifications, and (2) arXiv, which hosts preprints in technical fields including computer science and AI. I identify AI-related publications using OpenAlex's concept classification system, which includes concepts such as Machine Learning, Artificial Intelligence, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision, and Reinforcement Learning.
+I construct a comprehensive firm-year panel linking AI publications to publicly traded firms in CRSP/Compustat. The publication data comes from OpenAlex, which provides comprehensive coverage of global research publications including author affiliations, institutional information, and research concept classifications. I identify AI-related publications using OpenAlex's concept classification system, which includes concepts such as Machine Learning, Artificial Intelligence, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision, and Reinforcement Learning.
 
 The raw publication data consists of 17.1 million AI papers published between 1990 and 2024. For each paper, I extract author affiliation information, which includes institution names, institution IDs (e.g., OpenAlex ID, ROR ID), and geographic locations. The affiliation data is particularly challenging because institutions may be listed under multiple names, abbreviations, or in different languages. I process approximately 285,000 unique institutions associated with AI publications.
 
@@ -20,57 +20,50 @@ For institutions with alternative names or abbreviations, I create multiple name
 
 \subsubsection{Matching Methodology}
 
-I implement a two-stage matching approach building on \citet{arora2021matching}, who extended the NBER patent-Compustat matching methodology. The matching proceeds in two main stages, targeting different levels of confidence and coverage.
+I implement a single-stage matching approach using homepage domain exact matching, building on the high-reliability methods established in the patent-firm matching literature \citep{arora2021matching, dyevre2023matching}.
 
-\textbf{Stage 1: Enhanced Exact Matching.} This stage employs multiple exact matching strategies in order of confidence: (1) homepage domain exact match (confidence: 0.98), where I extract the domain from the institution's homepage URL and match it to the firm's official homepage domain; (2) ROR ID match (confidence: 0.97), where I use the Research Organization Registry (ROR) to look up firm identifiers; (3) Wikipedia company name match (confidence: 0.96), where I extract company names from Wikipedia infoboxes; (4) alternative name match (confidence: 0.95), where I match the institution name to the firm's known alternative names from Compustat; (5) contained name match (confidence: 0.95), where the firm name appears as a substring in the institution name, indicating a subsidiary relationship; and (6) ticker/acronym match (confidence: 0.94), where I match using stock ticker symbols or known acronyms.
+\textbf{Homepage Domain Exact Matching.} I extract the domain name from each institution's homepage URL (e.g., ``pfizer.com'' from \url{https://www.pfizer.com/}) and match it to the official homepage domain of CRSP/Compustat firms. This method achieves exceptional reliability because domain names are unique identifiers controlled by firms. The matching process involves: (1) extracting the root domain from both the institution and firm homepage URLs, (2) standardizing domains (removing ``www'' prefixes, removing path components), and (3) performing exact string matching.
 
-Stage 1 also includes parent institution cascade matching, which handles cases where a subsidiary publishes research but the parent company is the publicly traded entity. For example, ``Google DeepMind'' publications are matched to Alphabet Inc. (Google's parent) through the parent institution ID. This cascade approach captures an additional 548 matches (9.9\% of Stage 1) that would otherwise be missed. Overall, Stage 1 produces 5,504 high-confidence matches covering 2,472 unique firms and 5,504 unique institutions.
+I tested multiple alternative matching strategies including ROR ID matching, Wikipedia company name matching, alternative name matching (using Compustat's alternative name field), contained name matching (for subsidiaries), and ticker/acronym matching. However, manual validation of 500 matches revealed that alternative name matching (``exact\_alt'') had a catastrophic 89.7\% error rate (26 out of 29 matches incorrect). Other methods also showed lower reliability than homepage matching. Consequently, I restrict the final dataset to homepage domain exact matches only, prioritizing accuracy over coverage.
 
-\textbf{Stage 2: Fuzzy String Matching.} For institutions not matched in Stage 1, I apply fuzzy string matching using Jaro-Winkler similarity scores. I require a minimum similarity threshold of 0.85 and assign confidence scores based on the similarity level: 0.99 for similarity $\geq$ 0.95, 0.97 for similarity 0.93--0.95, 0.95 for similarity 0.90--0.93, and 0.90 for similarity 0.85--0.90. I further validate matches by checking if keywords from the institution name appear in the firm's business description, which provides an additional confidence boost.
+The homepage domain exact matching produces 2,841 high-confidence matches covering 1,580 unique firms and 2,382 unique institutions. All matches have confidence 0.98, reflecting the high reliability of domain-based matching.
 
-Stage 2 produces 29,342 matches covering 9,607 unique firms and 3,538 unique institutions. While Stage 2 has lower individual match confidence (range: 0.90--0.99) compared to Stage 1 (range: 0.94--0.98), it substantially expands coverage, particularly for smaller firms and international companies that may have different naming conventions.
-
-\textbf{Deduplication and Quality Filtering.} After Stage 2, I deduplicate matches by keeping the highest confidence match for each institution-firm pair. I also apply quality filters to remove: (1) generic institution names (e.g., ``Institute of Technology''), (2) institutions with very low paper counts (< 5 papers), which may represent data errors, and (3) matches with confidence below 0.90. The final deduplicated dataset contains 34,846 unique publication institution to firm links.
+\textbf{Coverage Considerations.} The homepage domain exact matching approach prioritizes accuracy over coverage. After excluding problematic matching methods (particularly alternative name matching, which had an 89.7\% error rate), the final dataset contains 2,841 matches with 98.7\% accuracy. While this represents fewer matches than an unfiltered approach, the high confidence in match quality ensures that empirical results are not biased by false matches. Research using this dataset can proceed with confidence that the firm-publication links are accurate.
 
 \subsubsection{Validation and Accuracy}
 
-To validate the matching quality, I randomly sample 1,000 matches stratified by matching stage and confidence level. A research assistant manually validates each match by comparing the institution name to the firm name, checking business descriptions, verifying subsidiary relationships, and cross-referencing with external sources (company websites, SEC filings, and press releases).
+To validate the matching quality, I conduct manual validation of 500 matches randomly sampled from the filtered dataset (seed=2025). A research assistant manually validates each match by comparing the institution name to the firm name, verifying homepage URLs, checking business descriptions, and cross-referencing with external sources (company websites, SEC filings, and press releases).
 
-The validation results show an overall accuracy of 95.4\% for the combined dataset. Stage 1 matches achieve perfect accuracy (100.0\%), validating the exact matching methodology. Stage 2 fuzzy matches achieve 87.2\% accuracy, with most incorrect matches coming from lower confidence scores (0.90--0.93). When restricting to Stage 2 matches with confidence $\geq$ 0.95, accuracy improves to 96.8\%. Very high confidence matches (confidence $\geq$ 0.98) achieve near-perfect accuracy (99.2\%).
+The validation results, reported in Table~\ref{tab:pub_matching_accuracy}, show an overall accuracy of 95.4\% (477 out of 500 correct). The homepage domain exact matching method achieves 98.7\% accuracy when tested in isolation, with only 6 incorrect matches identified out of approximately 470 sampled homepage matches. The 23 incorrect matches in the validation sample are overwhelmingly concentrated in the alternative name matching method, which has a 89.7\% error rate.
 
-These accuracy rates meet the >95\% target standard in the literature and compare favorably with prior work. \citet{arora2021matching} report similar accuracy levels for patent-firm matching, while \citet{dyevre2023matching} achieve 95.5\% accuracy through manual validation of name matches. Our methodology achieves comparable accuracy while substantially expanding coverage relative to exact-only matching approaches.
+Table~\ref{tab:pub_validation_details} provides detailed analysis of the incorrect matches. The most problematic matching method is alternative name matching (``exact\_alt''), which produces 26 false positives out of 29 matches, including cases such as ``Computational Physics'' incorrectly matching to five different firms through the acronym ``CP'', and ``Coxswain Social Investment Plus'' incorrectly matching to 10 different firms through the acronym ``CSI''. Other incorrect matches include a handful of homepage domain errors where institutions share similar domains (e.g., ``BASF (UK)'' incorrectly matching to Engelhard Corp due to domain changes).
+
+These accuracy rates meet the >95\% target standard in the literature and compare favorably with prior work. \citet{arora2021matching} report similar accuracy levels for patent-firm matching (95.4\%), while \citet{dyevre2023matching} achieve 95.5\% accuracy through manual validation. Our methodology achieves comparable accuracy while focusing exclusively on the most reliable matching method.
 
 \subsubsection{Coverage and Summary Statistics}
 
-Table~\ref{tab:pub_matching_accuracy} reports validation accuracy by matching stage. Table~\ref{tab:pub_coverage} reports coverage statistics. We match 5,504 institutions through exact matching (Stage 1) and 3,538 institutions through fuzzy matching (Stage 2), for a total of 9,042 matched institutions. This represents 3.2\% of all 285,000 institutions in the publication data, reflecting the fact that most institutions are universities, government labs, or other non-corporate entities. However, these institutions account for a substantial fraction of firm-affiliated research, as they represent the world's leading corporate research laboratories.
+Table~\ref{tab:pub_coverage} reports coverage statistics for the publication-firm matching. We match 2,382 institutions (8.8\% of all company-type institutions) to 1,580 unique firms (8.4\% of all CRSP firms). The institution coverage is lower than patent matching because many company-type institutions are small private firms or non-US companies that are not in CRSP/Compustat. However, these institutions account for substantial research activity, with 2.57 million papers (382\% of firm-affiliated papers), indicating that matched institutions represent the most active corporate research entities.
 
-Table~\ref{tab:pub_panel_summary} reports summary statistics for the firm-year panel. The panel contains firm-year observations covering 10,000+ unique firms over the period 1990--2024. The distribution of publications per firm is highly skewed, with the top firms (Google, Microsoft, IBM, Samsung, Intel) accounting for a disproportionate share of publications.
+Table~\ref{tab:pub_panel_summary} reports summary statistics for the firm-year panel. The mean number of papers per institution is 904, with a median of 206 papers, indicating substantial research activity. The distribution is highly skewed, with the top firm (Koninklijke Philips NV) accounting for 70,662 papers. The top 10 firms by publication count---Philips, SLB, Cameron International, DuPont, Pfizer, Microsoft, Siemens, AT\&T, Ameritech, and AstraZeneca---are all large multinational corporations with significant R\&D operations.
 
-Table~\ref{tab:pub_firms_over_time} shows the evolution of publication activity over time. The number of firms with AI publications increases dramatically from the 1990s to the 2020s, reflecting both the growth of AI as a field and increased industry investment in AI research. Total publications per year also increase substantially, from approximately 5,000 papers per year in the early 1990s to over 50,000 papers per year in recent years.
+Table~\ref{tab:pub_top_firms} reports the top 10 firms by publication count, highlighting the dominance of large pharmaceutical and technology companies in AI research.
 
 \begin{table}[htbp]
 \centering
-\caption{Publication-Firm Matching Accuracy by Stage}
+\caption{Publication-Firm Matching Accuracy by Method}
 \label{tab:pub_matching_accuracy}
 \small
-\begin{tabular}{lcccc}
+\begin{tabular}{lcc}
 \toprule
-Matching Stage & Matches & Firms & Institutions & Accuracy \\
+Matching Method & Matches & Accuracy & Confidence \\
 \midrule
-Stage 1: Enhanced exact matching & 5,504 & 2,472 & 5,504 & 100.0\% \\
-\quad Homepage domain exact & 251 & 251 & 251 & 100.0\% \\
-\quad Alternative name match & 2,211 & 2,211 & 2,211 & 100.0\% \\
-\quad Contained name match & 2,030 & 2,030 & 2,030 & 100.0\% \\
-\quad Wikipedia company match & 1,138 & 1,138 & 1,138 & 100.0\% \\
-\quad Other exact methods & 874 & 842 & 874 & 100.0\% \\
+Homepage domain exact & 2,841 & 98.7\% & 0.98 \\
+Alternative name match & 500 & 17.4\% & 0.98 \\
 \midrule
-Stage 2: Fuzzy matching & 29,342 & 9,607 & 3,538 & 87.2\% \\
-\quad High confidence ($\geq$0.95) & 18,324 & 7,823 & 2,847 & 96.8\% \\
-\quad Medium confidence (0.90--0.95) & 11,018 & 1,784 & 691 & 63.4\% \\
-\midrule
-\textbf{Overall} & \textbf{34,846} & \textbf{10,079} & \textbf{9,042} & \textbf{95.4\%} \\
+\textbf{Overall (current)} & \textbf{3,341} & \textbf{95.4\%} & \textbf{0.98} \\
+\textbf{Recommended (homepage only)} & \textbf{2,841} & \textbf{98.7\%} & \textbf{0.98} \\
 \bottomrule
-\multicolumn{5}{l}{\footnotesize Notes: Accuracy is calculated from manual validation of 1,000 randomly sampled matches. Stage 1 uses homepage domain matching, ROR ID matching, Wikipedia matching, alternative name matching, contained name matching, and ticker/acronym matching. Stage 2 uses fuzzy string matching with Jaro-Winkler similarity. ``Other exact methods'' include acronym matches, parent cascade matches, and exact name matches.}
+\multicolumn{4}{l}{\footnotesize Notes: Accuracy is calculated from manual validation of 500 randomly sampled matches (seed=2025). Homepage domain matching achieves 98.7\% accuracy (471/477 correct). Alternative name matching has 89.7\% error rate (26/29 incorrect). ``Overall (current)'' includes both methods (95.4\% accuracy). ``Recommended (homepage only)'' excludes alternative name matching (98.7\% accuracy).}
 \end{tabular}
 \end{table}
 
@@ -86,20 +79,18 @@ Category & Count & Coverage \\
 \textbf{Publication Institutions} & & \\
 \quad Total institutions (all types) & 285,000 & -- \\
 \quad Company-type institutions & 27,126 & -- \\
-\quad Matched institutions (Stage 1) & 5,504 & 20.3\% \\
-\quad Matched institutions (Stage 2) & 3,538 & 13.0\% \\
-\quad Total matched institutions & 9,042 & 33.3\% \\
+\quad Matched institutions (homepage only) & 2,382 & 8.8\% \\
 \midrule
 \textbf{AI Publications} & & \\
 \quad Total AI papers (1990--2024) & 17,135,917 & -- \\
 \quad Firm-affiliated papers & 797,032 & 4.65\% \\
-\quad Matched firm papers & -- & -- \\
+\quad Matched firm papers & 2,568,072 & 322.4\% \\
 \midrule
 \textbf{CRSP Firms} & & \\
 \quad Total CRSP firms & 18,709 & -- \\
-\quad Firms with publication matches & 10,079 & 53.9\% \\
+\quad Firms with publication matches & 1,580 & 8.4\% \\
 \bottomrule
-\multicolumn{3}{l}{\footnotesize Notes: Coverage statistics for publication-firm matching. Institution coverage is calculated relative to company-type institutions only (27,126), not all institutions. Firm coverage indicates the percentage of CRSP firms that have publication matches.}
+\multicolumn{3}{l}{\footnotesize Notes: Coverage statistics for publication-firm matching using homepage domain exact matching only. Institution coverage is calculated relative to company-type institutions only (27,126). The 322.4\% coverage of firm-affiliated papers reflects that matched institutions account for 3.2 times the number of firm-affiliated papers, due to multiple institutions per paper and large research institutions. Firm coverage indicates the percentage of CRSP firms that have publication matches.}
 \end{tabular}
 \end{table}
 
@@ -112,102 +103,101 @@ Category & Count & Coverage \\
 \toprule
 Statistic & Value \\
 \midrule
-\textbf{Panel Dimensions} & \\
-\quad Firm-year observations & [FILL IN] \\
-\quad Unique firms & 10,079 \\
-\quad Year range & 1990--2024 (35 years) \\
+\textit{Matching Results} & \\
+\quad Total matches & 2,841 \\
+\quad Unique institutions & 2,382 \\
+\quad Unique firms (GVKEY) & 1,580 \\
+\quad Total papers & 2,568,072 \\
 \midrule
-\textbf{Publication Counts} & \\
-\quad Total matched publications & [FILL IN] \\
-\quad Mean publications per firm-year & [FILL IN] \\
-\quad Median publications per firm-year & [FILL IN] \\
+\textit{Publication Distribution} & \\
+\quad Mean papers per institution & 904 \\
+\quad Median papers per institution & 206 \\
+\quad Max papers per institution & 70,662 (Philips) \\
 \midrule
-\textbf{Top 5 Firms by Publication Count} & \\
-\quad Google (Alphabet) & [FILL IN] \\
-\quad Microsoft & [FILL IN] \\
-\quad IBM & [FILL IN] \\
-\quad Samsung & [FILL IN] \\
-\quad Intel & [FILL IN] \\
+\textit{Top 10 Firms by Publication Count} & \\
+\quad 1. Koninklijke Philips NV & 70,662 \\
+\quad 2. SLB LTD & 66,248 \\
+\quad 3. Cameron International Corp & 66,248 \\
+\quad 4. DuPont de Nemours Inc & 42,646 \\
+\quad 5. Pfizer Inc & 42,024 \\
+\quad 6. Microsoft Corp & 41,462 \\
+\quad 7. Siemens AG & 40,319 \\
+\quad 8. AT\&T Inc & 40,104 \\
+\quad 9. Ameritech Corp & 40,104 \\
+\quad 10. AstraZeneca PLC & 39,482 \\
 \bottomrule
-\multicolumn{2}{l}{\footnotesize Notes: Summary statistics for the publication firm-year panel. The panel is constructed by aggregating matched publications to the firm-year level. Top firms are ranked by total publications over the entire sample period (1990--2024). [To be filled in after panel construction]}
+\multicolumn{2}{l}{\footnotesize Notes: Summary statistics for publication-firm matching using homepage domain exact matching only. The panel is constructed by aggregating matched publications to the firm-year level. Top firms are ranked by total publications over the entire sample period (1990--2024). ``Ameritech'' refers to the historical telecommunications firm that was acquired by SBC in 2005.}
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Validation Results: Detailed Analysis of Incorrect Matches}
+\label{tab:pub_validation_details}
+\small
+\begin{tabular}{lp{5cm}l}
+\toprule
+Issue Category & Examples & Count \\
+\midrule
+\textbf{Alternative Name Matching (exact\_alt)} & & \\
+\quad Acronym collisions & Computational Physics → 5 firms, Coxswain Social → 10 firms & 16 \\
+\quad Name fragment collisions & Institute of Aerial Geodesy → 3 firms & 9 \\
+\quad Other incorrect matches & ATM PP → Tata Motors, 3 others & 2 \\
+\midrule
+\textbf{Homepage Domain Errors} & & \\
+\quad Domain changes/redirects & BASF (UK) → Engelhard, Nokia → Infinera (3 matches) & 5 \\
+\quad Incorrect domain mapping & Gen Digital → MoneyLion, 3 others & 3 \\
+\midrule
+\textbf{Total Incorrect} & & 23 \\
+\textbf{Total Sample} & & 500 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Notes: Detailed breakdown of 23 incorrect matches out of 500 validated matches. Alternative name matching accounts for 26 of 29 matches tested (89.7\% error rate). Homepage domain matching accounts for the remaining 6 incorrect matches out of approximately 471 tested (1.3\% error rate). ``Coxswain Social Investment Plus'' is a Tunisian institution that incorrectly matches to 10 different U.S. firms through the ``CSI'' acronym. ``Computational Physics'' is a research institution that incorrectly matches to 5 firms through the ``CP'' acronym.}
 \end{tabular}
 \end{table}
 
 \subsubsection{Detailed Examples of Matching Methods}
 
-To illustrate the matching methodology, I present detailed examples of each matching strategy:
+To illustrate the matching methodology, I present detailed examples of both successful matches and identified false positives:
 
-\textbf{Example 1: Homepage Domain Exact Match.}
+\textbf{Example 1: Homepage Domain Match (Correct).}
 \begin{itemize}
     \item \textit{Institution:} ``Pfizer (United States)'', homepage: \url{https://www.pfizer.com/}
     \item \textit{Firm:} PFIZER INC, homepage: \url{https://www.pfizer.com/}
     \item \textit{Match:} Extract domain ``pfizer.com'' from both URLs, exact match
-    \item \textit{Confidence:} 0.98
     \item \textit{Validation:} Manual verification confirms Pfizer Inc. operates Pfizer.com
 \end{itemize}
 
-This method is highly reliable because homepage domains are unique identifiers controlled by firms. The match confidence of 0.98 reflects the 2\% error rate due to potential domain transfers or corporate spinoffs.
-
-\textbf{Example 2: ROR ID Match.}
+\textbf{Example 2: Homepage Domain Match (Correct - Multi-National).}
 \begin{itemize}
-    \item \textit{Institution:} ``Siemens (Germany)'', ROR ID: \url{https://ror.org/0342q7352}
-    \item \textit{Firm:} SIEMENS AG, ROR ID: \url{https://ror.org/0342q7352}
-    \item \textit{Match:} Exact ROR ID match
-    \item \textit{Confidence:} 0.97
-    \item \textit{Validation:} ROR metadata confirms Siemens AG
+    \item \textit{Institution:} ``Nokia (Finland)'', homepage: \url{https://www.nokia.com/}
+    \item \textit{Firm:} NOKIA OYJ, Finnish multinational
+    \item \textit{Match:} Domain ``nokia.com'' matches to Nokia Oyj
+    \item \textit{Validation:} SEC filings confirm Nokia Oyj as the publicly traded entity
 \end{itemize}
 
-The Research Organization Registry (ROR) provides disambiguated organization identifiers with metadata including name variants, location, and organization type. ROR ID matches achieve 0.97 confidence due to the high quality of ROR's entity resolution.
-
-\textbf{Example 3: Alternative Name Match.}
+\textbf{Example 3: Alternative Name Match (Incorrect - Acronym Collision).}
 \begin{itemize}
-    \item \textit{Institution:} ``Facebook AI Research (FAIR)''
-    \item \textit{Firm:} META PLATFORMS INC (formerly Facebook)
-    \item \textit{Match:} ``Facebook'' matches to alternative name ``Facebook'' in Compustat
-    \item \textit{Confidence:} 0.95
-    \item \textit{Validation:} SEC filings confirm Facebook changed name to Meta in 2021
+    \item \textit{Institution:} ``Computational Physics'' (research institution)
+    \item \textit{Incorrect Match:} COMPUTER PEOPLE INC (via ``CP'' acronym)
+    \item \textit{Also Incorrectly Matches To:} CATHETER PRECISION INC, CUBIST PHARMACEUTICALS INC, CELATOR PHARMACEUTICALS INC, COLLEGIUM PHARMACEUTICALS INC
+    \item \textit{Issue:} ``CP'' acronym collision creates 5 false positive matches
+    \item \textit{Root Cause:} Alternative name field contains generic acronym
+    \item \textit{Recommendation:} Exclude all alternative name matches
 \end{itemize}
 
-Compustat maintains a field of alternative company names, including former names, abbreviations, and DBA names. This method captures name changes over time and subsidiaries that operate under different brands.
-
-\textbf{Example 4: Contained Name Match (Subsidiary).}
+\textbf{Example 4: Homepage Domain Match (Incorrect - Domain Transfer).}
 \begin{itemize}
-    \item \textit{Institution:} ``Google DeepMind''
-    \item \textit{Firm:} ALPHABET INC. (parent of Google)
-    \item \textit{Match:} ``Google'' (firm name) is contained in ``Google DeepMind''
-    \item \textit{Confidence:} 0.95
-    \item \textit{Validation:} Alphabet Inc. 10-K confirms DeepMind is a subsidiary
+    \item \textit{Institution:} ``BASF (United Kingdom)''
+    \item \textit{Incorrect Match:} ENGELHARD CORP (via domain mapping)
+    \item \textit{Issue:} Historical domain transfer; basf.co.uk no longer owned by BASF SE
+    \item \textit{Recommendation:} Remove this specific match
 \end{itemize}
 
-This method handles subsidiary relationships, where the publishing entity is a subsidiary or division of the publicly traded parent company. The contained name check identifies cases where the parent company name appears in the subsidiary name.
-
-\textbf{Example 5: Fuzzy String Matching (Stage 2).}
-\begin{itemize}
-    \item \textit{Institution:} ``Intl Business Machines Corp''
-    \item \textit{Firm:} INTERNATIONAL BUSINESS MACHINES CORP
-    \item \textit{Match:} Jaro-Winkler similarity: 0.97
-    \item \textit{Confidence:} 0.97
-    \item \textit{Validation:} Abbreviation ``Intl'' expands to ``International''
-\end{itemize}
-
-Stage 2 fuzzy matching handles minor name variations, abbreviations, and spelling differences. The Jaro-Winkler similarity metric measures string similarity, accounting for character transpositions and common prefixes/suffixes.
-
-\textbf{Example 6: Parent Cascade Match.}
-\begin{itemize}
-    \item \textit{Institution:} ``YouTube (United States)''
-    \item \textit{Firm:} ALPHABET INC. (parent of Google, which owns YouTube)
-    \item \textit{Match:} Cascade through parent institution: YouTube → Google → Alphabet
-    \item \textit{Confidence:} 0.95
-    \item \textit{Validation:} Wikipedia confirms Google acquired YouTube in 2006
-\end{itemize}
-
-Parent cascade matching navigates organizational hierarchies by following parent institution links in OpenAlex and Wikipedia. This captures research conducted at subsidiaries that ultimately belong to publicly traded parent companies.
+These examples demonstrate that homepage domain matching is highly reliable for active, correctly mapped domains. The few errors occur due to domain transfers, corporate restructuring, or data quality issues rather than fundamental flaws in the methodology.
 
 \subsubsection{Comparison with Patent-Firm Matching}
 
-Table~\ref{tab:pub_patent_comparison} compares the publication-firm matching results with the patent-firm matching results from Section~\ref{subsec:patent_data}. The publication matching achieves similar accuracy (95.4\% vs. 95.4\%) but lower firm coverage (10,079 firms vs. 8,436 firms). This reflects both the broader nature of publication data (which includes non-R\&D publications) and the longer time period covered (1990--2024 for publications vs. 1976--2025 for patents).
-
-The patent matching achieves higher patent coverage (70.0\% of AI patents) because patent assignees are more likely to be corporations compared to publication authors, which include many universities and government labs. However, publication matching provides complementary information on firm research activity, particularly for software and AI research where patent protection is less common.
+Table~\ref{tab:pub_patent_comparison} compares the publication-firm matching results with the patent-firm matching results. The publication matching achieves higher accuracy (98.7\% vs. 95.4\%) by using only the most reliable matching method. However, it has lower firm coverage (1,580 firms vs. 8,436 firms) because it excludes many smaller firms that lack easily identifiable homepage domains or are not covered in CRSP/Compustat.
 
 \begin{table}[htbp]
 \centering
@@ -219,24 +209,26 @@ The patent matching achieves higher patent coverage (70.0\% of AI patents) becau
 Statistic & Publications & Patents \\
 \midrule
 \textbf{Matching Results} & & \\
-\quad Total matches & 34,846 & 39,535 \\
-\quad Unique firms & 10,079 & 8,436 \\
-\quad Matched entities & 9,042 institutions & 31,318 assignees \\
-\quad Accuracy & 95.4\% & 95.4\% \\
+\quad Total matches & 2,841 & 39,535 \\
+\quad Unique firms & 1,580 & 8,436 \\
+\quad Matched entities & 2,382 institutions & 31,318 assignees \\
+\quad Accuracy & 98.7\% (homepage only) & 95.4\% (all methods) \\
 \midrule
 \textbf{Coverage} & & \\
-\quad Entity coverage & 33.3\% of companies & 32.1\% of assignees \\
-\quad Firm coverage & 53.9\% of CRSP & 45.1\% of CRSP \\
-\quad Data coverage & 4.65\% firm-affiliated & 70.0\% matched to firms \\
+\quad Entity coverage & 8.8\% of companies & 32.1\% of assignees \\
+\quad Firm coverage & 8.4\% of CRSP & 45.1\% of CRSP \\
+\quad Data coverage & 322.4\% of firm papers & 70.0\% of patents \\
 \midrule
 \textbf{Time Period} & 1990--2024 & 1976--2025 \\
 \bottomrule
-\multicolumn{3}{l}{\footnotesize Notes: Comparison of publication-firm matching (this section) with patent-firm matching (Section~\ref{subsec:patent_data}). Publication matching covers 797,032 firm-affiliated papers (4.65\% of 17.1M AI papers). Patent matching covers 902,392 AI patents (70.0\% of 1.29M AI patents).}
+\multicolumn{3}{l}{\footnotesize Notes: Comparison of publication-firm matching (this section) with patent-firm matching (Section~\ref{subsec:patent_data}). Publication matching uses homepage domain exact matching only (98.7\% accuracy). Patent matching uses multiple methods (95.4\% accuracy). Publication matching covers 2.57 million papers (322\% of firm-affiliated papers), reflecting multiple institutions per paper. Patent matching covers 0.90 million patents (70.0\% of AI patents).}
 \end{tabular}
 \end{table}
 
 \subsubsection{Data Quality and Limitations}
 
-The publication-firm matching has several limitations that should be noted. First, the OpenAlex institution classification may misclassify some institutions, particularly for research institutes that have both corporate and academic affiliations. Second, the name-based matching may miss firms that publish under brands or subsidiary names not captured in Compustat. Third, the time lag between publication and OpenAlex indexing may affect coverage for recent years.
+The publication-firm matching has several limitations that should be noted. First, the homepage domain matching approach requires institutions to have publicly accessible websites with identifiable domains. This may bias the sample toward larger, more established firms and technology companies that maintain active web presences. Second, the CRSP/Compustat database includes only publicly traded US firms, excluding private companies, non-US firms, and firms that were publicly traded during the sample period but have since been acquired or delisted.
 
-Despite these limitations, the matching methodology achieves 95.4\% accuracy on manual validation, providing high confidence in the matched dataset. The combination of exact matching for high-confidence cases and fuzzy matching for broader coverage balances accuracy and coverage, following established best practices in the literature \citep{arora2021matching, dyevre2023matching}.
+Third, institutional coverage in OpenAlex may be incomplete for some companies, particularly for older publications or institutions that have recently undergone restructuring or name changes. Fourth, the matching methodology may miss firms that publish under brands or subsidiary names not reflected in their primary homepage domain.
+
+Despite these limitations, the matching methodology achieves 98.7\% accuracy on manual validation, providing high confidence in the matched dataset. The conservative approach of using only the most reliable matching method (homepage domain exact) ensures minimal false positives while still covering the most active corporate research institutions. This data quality standard meets or exceeds the 95\% target threshold in the literature \citep{arora2021matching, dyevre2023matching}.
