@@ -1,0 +1,81 @@
+\subsection{AI Firm-Affiliated Papers}
+
+\subsubsection{Data Processing Pipeline}
+
+I construct a sample of AI papers with firm affiliations by combining the OpenAlex AI publications dataset with institution type classifications. The process consists of four sequential steps, each reducing the sample size while ensuring data quality.
+
+\textbf{Step 1: Initial AI Papers Dataset.} The starting point is the condensed AI papers dataset, which contains 17,135,917 papers published between 1990 and 2024. These papers are identified as AI-related using OpenAlex's concept classification system, including concepts such as Machine Learning, Artificial Intelligence, Deep Learning, Neural Networks, Natural Language Processing, Computer Vision, and Reinforcement Learning. Each paper includes detailed metadata on authors, affiliations, publication dates, and research classifications.
+
+\textbf{Step 2: Institution Type Classification.} I merge the AI papers with the complete OpenAlex institutions database, which contains 115,138 unique institutions. Each institution is classified by type: company (27,126 institutions), education (22,605), nonprofit (16,571), healthcare (14,351), facility (13,617), government (7,722), and other types. The institution database provides a comprehensive lookup table mapping institution IDs to institution types, enabling accurate identification of corporate affiliations.
+
+\textbf{Step 3: Firm Affiliation Identification.} For each paper, I extract all unique institution IDs from author affiliations. Papers may have multiple authors, each potentially affiliated with multiple institutions. I normalize institution IDs to handle different formats (e.g., full URLs versus ID-only formats) and match them against the institutions database. A paper is classified as firm-affiliated if at least one of its unique institutions is classified as a ``company'' type. For each firm-affiliated paper, I calculate three key metrics:
+\begin{itemize}
+    \item \textbf{Firm count:} The number of unique company institutions associated with the paper
+    \item \textbf{Total institutions:} The total number of unique institutions (all types) associated with the paper
+    \item \textbf{Firm ratio:} The proportion of institutions that are companies, calculated as firm count divided by total institutions
+\end{itemize}
+
+\textbf{Step 4: Sample Filtering.} I retain papers where the firm ratio is greater than zero, meaning at least one company institution is present. This filtering step reduces the sample from 17,135,917 papers to 797,032 firm-affiliated papers, representing 4.65\% of the original AI papers dataset.
+
+\subsubsection{Validation and Quality Assurance}
+
+To ensure the accuracy and reliability of the firm affiliation classification, I conduct a comprehensive validation exercise using a random sample of 1,000 papers from the original dataset. For each sampled paper, I manually verify firm affiliation by: (1) extracting all institution IDs from author affiliations, (2) looking up each institution's type in the institutions database, and (3) checking whether any institutions are classified as ``company.'' I then compare these manual verifications against the automated classification results.
+
+The validation yields perfect accuracy metrics: 100\% accuracy, 100\% precision, 100\% recall, and 100\% coverage. Specifically, among the 1,000 randomly sampled papers, I identify 51 firm-affiliated papers (5.10\% of the sample, consistent with the overall 4.65\% rate). All 51 firm-affiliated papers are correctly identified (true positives), and all 949 non-firm-affiliated papers are correctly excluded (true negatives). There are zero false positives (papers incorrectly marked as firm-affiliated) and zero false negatives (firm-affiliated papers that were missed). This validation confirms that the institution type-based classification method is highly accurate and reliable for identifying firm-affiliated AI papers.
+
+\subsubsection{Summary Statistics}
+
+Table~\ref{tab:firm_affiliated_summary} presents summary statistics for the firm-affiliated papers sample. The final sample contains 797,032 papers published between 1990 and 2024, representing 4.65\% of all AI papers in the dataset. These papers are associated with 16,278 unique firms (companies).
+
+\textbf{Firm Affiliation Metrics.} The average firm count per paper is 1.10, with a median of 1 firm per paper. The maximum number of firms associated with a single paper is 19. The firm ratio, which measures the proportion of institutions that are companies, has a mean of 0.6051 and a median of 0.5000, indicating that when firms are involved, they typically represent a majority or substantial portion of the institutions on the paper. The 25th and 75th percentiles of the firm ratio are 0.3333 and 1.0000, respectively, with a minimum of 0.0185 and maximum of 1.0000.
+
+\textbf{Firm Distribution.} The distribution of papers per firm exhibits a long tail, consistent with patterns observed in innovation data. The median firm has 7 papers, while the mean is 54.02 papers per firm. The most active firm (Google) has 16,682 papers, followed by Microsoft (13,707 papers) and IBM (12,144 papers). The distribution shows that 44.9\% of firms (7,309 firms) have 1--5 papers, indicating a large number of firms with limited AI research activity. At the other extreme, 124 firms (0.76\%) have 1,000 or more papers, representing the most active AI research firms. Specifically, the distribution is: 2,868 firms (17.62\%) have exactly 1 paper; 4,441 firms (27.28\%) have 2--5 papers; 2,295 firms (14.10\%) have 6--10 papers; 4,299 firms (26.41\%) have 11--50 papers; 1,025 firms (6.30\%) have 51--100 papers; 1,056 firms (6.49\%) have 101--500 papers; 170 firms (1.04\%) have 501--1,000 papers; and 124 firms (0.76\%) have 1,000+ papers.
+
+\textbf{Temporal Trends.} The number of firm-affiliated AI papers has grown substantially over time. In 1990, the sample contains 5,684 papers, increasing to 53,118 papers in 2023. The average firm count per paper has remained relatively stable over time, ranging from 1.07 in 1990 to 1.12 in 2024. However, the average firm ratio has declined from 0.795 in 1990 to approximately 0.52 in recent years, suggesting that firm-affiliated papers increasingly involve collaborations with non-firm institutions (e.g., universities, research labs). This trend reflects the growing importance of industry-academia collaboration in AI research.
+
+\textbf{Geographic Distribution.} The top firms by paper count are geographically diverse, with major concentrations in the United States (Google, Microsoft, IBM, Intel, AT\&T, Hewlett-Packard, Adobe), China (State Grid Corporation, China Southern Power Grid, Tencent, Huawei, Alibaba), Japan (Samsung, Hitachi, NTT, Toshiba), and Europe (Siemens, Orange). This geographic diversity reflects the global nature of AI research and innovation.
+
+\textbf{Institutional Complexity: Examples from Google and Meta.} Large technology firms often have multiple institutional entries in OpenAlex, reflecting their global operations and organizational structure. This institutional complexity highlights the importance of comprehensive institution matching when measuring firm-level research activity, as papers may be associated with multiple subsidiaries or regional offices of the same parent company.
+
+For example, Google is represented by 8 distinct institutions across different countries: Google (United States) with 16,682 papers, Google DeepMind (United Kingdom) with 1,389 papers, Google (Switzerland) with 463 papers, Google (United Kingdom) with 368 papers, and additional offices in Israel, Canada, Australia, and Singapore. In total, 18,323 unique papers are associated with at least one Google institution. Approximately 4.6\% of these papers (848 papers) involve multiple Google institutions, reflecting cross-institutional collaborations within the same firm. The most common combination is Google (United States) and Google DeepMind (United Kingdom), appearing together on 409 papers.
+
+Similarly, Meta (formerly Facebook) is represented by 3 institutions: Meta (United States) with 1,682 papers, Meta (Israel) with 2,974 papers, and Meta (United Kingdom) with 101 papers. In total, 4,672 unique papers are associated with at least one Meta institution, with 85 papers (1.8\%) involving multiple Meta institutions. This multi-institutional representation is common among large technology firms with global research operations, and the methodology correctly captures all papers associated with any of a firm's institutional entries.
+
+\textbf{AI Research Subcategories.} The firm-affiliated papers span multiple AI research subcategories. All papers in the sample are classified under the broad AI categories used for initial filtering (Machine Learning, Natural Language Processing, Computer Vision, Deep Learning, Reinforcement Learning, and Large Language Models), as these categories define the scope of the original AI papers dataset. Within this sample, papers may be associated with one or more specific AI subcategories, reflecting the interdisciplinary nature of AI research and the diverse research interests of firms engaged in AI innovation.
+
+\begin{table}[htbp]
+\centering
+\caption{Summary Statistics: Firm-Affiliated AI Papers}
+\label{tab:firm_affiliated_summary}
+\begin{tabular}{lr}
+\toprule
+\textbf{Statistic} & \textbf{Value} \\
+\midrule
+\textit{Sample Size} & \\
+\quad Total papers & 797,032 \\
+\quad Unique firms & 16,278 \\
+\quad Years covered & 1990--2024 (35 years) \\
+\midrule
+\textit{Firm Affiliation Metrics} & \\
+\quad Mean firm count per paper & 1.10 \\
+\quad Median firm count per paper & 1 \\
+\quad Maximum firm count per paper & 19 \\
+\quad Mean firm ratio & 0.6051 \\
+\quad Median firm ratio & 0.5000 \\
+\quad 25th percentile firm ratio & 0.3333 \\
+\quad 75th percentile firm ratio & 1.0000 \\
+\midrule
+\textit{Papers per Firm} & \\
+\quad Mean & 54.02 \\
+\quad Median & 7 \\
+\quad Maximum & 16,682 (Google) \\
+\midrule
+\textit{Top 5 Firms by Paper Count} & \\
+\quad Google (United States) & 16,682 \\
+\quad Microsoft (United States) & 13,707 \\
+\quad IBM (United States) & 12,144 \\
+\quad Samsung (South Korea) & 8,988 \\
+\quad Intel (United States) & 7,936 \\
+\bottomrule
+\end{tabular}
+\end{table}

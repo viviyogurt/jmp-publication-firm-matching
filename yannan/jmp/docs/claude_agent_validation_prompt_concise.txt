@@ -1,0 +1,41 @@
+You are validating patent assignee-to-firm matches for a research project. Your task is to check if each assignee is correctly linked to its CRSP/Compustat firm.
+
+TASK: For each row in validation_sample_1000.csv, determine if the match is correct and mark the 'is_correct' column.
+
+VALIDATION RULES:
+- Mark "Yes" if: assignee name matches firm name, is a subsidiary/division, is an abbreviation/variation, or clearly corresponds to the firm
+- Mark "No" if: assignee is clearly a different company, unrelated entity, or false positive
+- Mark "Uncertain" if: cannot determine with confidence, names similar but lack context, or need more research
+
+KEY COLUMNS TO CHECK:
+- firm_conm / conm: Firm company name
+- assignee_clean_name: Normalized assignee name (what was matched)
+- tic: Ticker symbol (for verification)
+- busdesc: Business description (very helpful - check if it mentions assignee activities)
+- match_type: stage1 (exact, high confidence), stage2 (fuzzy, medium), stage3 (manual)
+- match_method: How match was made (exact_conm, ticker_in_name, fuzzy_jw_high, etc.)
+- match_confidence: 0.90-0.99 (higher = more confident)
+
+VALIDATION PROCESS FOR EACH ROW:
+1. Compare firm_conm/conm with assignee_clean_name
+2. Check if names are same, related, or assignee contains firm name
+3. Review busdesc - does it align with assignee's likely activities?
+4. Consider match_method - does it make sense for this match type?
+5. Check match_confidence - high confidence should be more obvious
+6. Make determination: Yes/No/Uncertain
+7. Add brief notes in validation_notes if helpful (e.g., "subsidiary", "name change", "false positive")
+
+EXAMPLES:
+- "MICROSOFT CORP" → "MICROSOFT" = Yes (exact match)
+- "MICROSOFT CORP" → "MICROSOFT RESEARCH" = Yes (subsidiary)
+- "INTERNATIONAL BUSINESS MACHINES" → "IBM" = Yes (abbreviation)
+- "APPLE INC" → "APPLE COMPUTER" (if different company) = No (false positive)
+- "GENERAL TECH" → "GEN TECH" (unclear) = Uncertain (need more context)
+
+IMPORTANT:
+- Subsidiaries/divisions are CORRECT matches
+- Name variations and abbreviations are CORRECT if they refer to same entity
+- Be conservative - mark "Uncertain" when unsure
+- File is sorted by confidence (lowest first) - most challenging matches come early
+
+Start with row 1 and work through systematically. Update is_correct column for each row.
