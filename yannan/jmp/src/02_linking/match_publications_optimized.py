@@ -250,10 +250,15 @@ def exact_name_match(inst_name: str, inst_alternatives: List[str],
     if inst_name and inst_name in lookup:
         matches.extend([(gvkey, 'exact_conm', 0.98) for gvkey, _ in lookup[inst_name]])
 
-    # Try alternative names
+    # Try alternative names (normalized)
     for alt_name in inst_alternatives:
-        if alt_name and alt_name in lookup:
-            matches.extend([(gvkey, 'exact_alt', 0.98) for gvkey, _ in lookup[alt_name]])
+        if alt_name:
+            # Normalize alternative name
+            alt_normalized = alt_name.upper().strip()
+            alt_normalized = re.sub(r'[^\w\s]', '', alt_normalized)
+            alt_normalized = re.sub(r'\s+', ' ', alt_normalized)
+            if alt_normalized and alt_normalized in lookup:
+                matches.extend([(gvkey, 'exact_alt', 0.98) for gvkey, _ in lookup[alt_normalized]])
 
     return matches
 
@@ -365,20 +370,33 @@ def firm_contained_match(inst_name: str,
     """
     Strategy 5: Firm name contained in institution name.
     Uses efficient substring checking with filters.
+    Only checks firm names that are actually substrings of inst_name.
     """
     matches = []
 
     if not inst_name or len(inst_name) < 8:
         return matches
 
-    # Check if any firm name is contained in institution name
-    for firm_name in all_firm_names:
+    # Build a more efficient lookup: check only firm names that could be substrings
+    # Sort by length (descending) to match longer names first
+    sorted_firm_names = sorted(all_firm_names, key=len, reverse=True)
+
+    for firm_name in sorted_firm_names:
         # Skip if firm name is too short or is generic
         if len(firm_name) < 8:
             continue
 
         # Skip generic words
         if firm_name in GENERIC_WORDS:
+            continue
+
+        # Skip if firm name is too long compared to institution name
+        if len(firm_name) > len(inst_name):
+            continue
+
+        # Check containment - only if firm name starts with same letter as inst_name
+        # This reduces unnecessary checks
+        if firm_name[0] != inst_name[0]:
             continue
 
         # Check containment
@@ -424,14 +442,13 @@ def match_institution(inst_row: Dict, lookup_dicts: Dict) -> List[Dict]:
     abbrev_matches = abbreviation_match(inst_name, lookup_dicts['name_lookup'])
     matches.extend(abbrev_matches)
 
-    # Strategy 5: Firm contained (only if no high-confidence matches)
-    if not matches or all(m[2] < 0.97 for m in matches):
-        contained_matches = firm_contained_match(
-            inst_name,
-            lookup_dicts['all_firm_names'],
-            lookup_dicts['name_lookup']
-        )
-        matches.extend(contained_matches)
+    # Strategy 5: Firm contained (always try, but keep lower confidence)
+    contained_matches = firm_contained_match(
+        inst_name,
+        lookup_dicts['all_firm_names'],
+        lookup_dicts['name_lookup']
+    )
+    matches.extend(contained_matches)
 
     # Convert to result dictionaries
     results = []
