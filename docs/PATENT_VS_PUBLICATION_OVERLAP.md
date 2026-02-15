@@ -219,15 +219,117 @@ This analysis **confirms** the findings from `docs/UNMATCHED_CRSP_FIRMS_ANALYSIS
 
 ---
 
+## 📊 Methodology Comparison
+
+### Patent Matching Approach
+
+**3-Stage Progressive Matching:**
+
+**Stage 1: Exact & High-Confidence** (35,203 matches, 100.0% accuracy)
+- Exact name match on standardized names (0.98)
+- ROR ID to GVKEY matching (0.97)
+- Wikidata ticker matching (0.97)
+- URL domain matching (0.96)
+- Ticker/acronym in institution name (0.96)
+- Firm name contained in institution name (0.95)
+- Abbreviation expansion (0.95)
+- Alternative names from Compustat (0.95)
+
+**Stage 2: Fuzzy Matching** (4,292 matches, 85.2% accuracy)
+- Jaro-Winkler similarity ≥0.85
+- Cross-validation: country, business description, location, URL
+- Confidence scoring with validation boosts
+- Filter: confidence ≥0.90
+
+**Stage 3: Manual Mappings** (40 matches, 100.0% accuracy)
+- Name changes, subsidiaries, joint ventures
+- Manual mapping file for edge cases
+
+**Final Results:**
+- 39,535 total matches
+- 8,436 unique firms (45.1% of CRSP)
+- 95.4% overall accuracy
+
+### Publication Matching Approach
+
+**Multi-Stage Exact Matching (Current Final):**
+
+**Methods Used:**
+1. **Homepage Domain Exact** (~2,400 matches, 98.7% accuracy)
+   - Extract domain from institution homepage
+   - Match to firm homepage domain
+   - Exceptional reliability (unique identifiers)
+
+2. **Location Qualifier Removal** (~800 matches, 98.0% accuracy)
+   - Remove geographic qualifiers: "IBM (United States)" → "IBM"
+   - Enables matching of institutions with location suffixes
+
+3. **Enhanced Alternative Names** (301 matches, 97.0% accuracy)
+   - Match using alternative_names field from OpenAlex
+   - Key innovation: abbreviation expansion (INTL → INTERNATIONAL)
+   - Successfully matched IBM (25,303 papers)
+
+4. **Separator Normalization** (3 matches, 95.0% accuracy)
+   - Remove ALL separators: "Alcatel Lucent" → "ALCATEL LUCENT"
+   - Handles edge cases with different separators
+
+5. **Contained Name** (~1,200 matches, 95.0% accuracy)
+   - Check if firm name is substring of institution name
+   - Validation: country match, business description keywords
+
+**Final Results:**
+- 5,867 total matches
+- 3,254 unique firms (17.39% of CRSP)
+- 3,809 unique institutions (23.4%)
+- 95.0% overall accuracy
+
+### Key Differences
+
+| Aspect | Patent Matching | Publication Matching |
+|--------|----------------|---------------------|
+| **Approach** | Progressive 3-stage (exact → fuzzy → manual) | Multi-stage exact matching only |
+| **Fuzzy Matching** | ✅ Yes (Stage 2) | ❌ No (high false positive rate) |
+| **Coverage** | 45.1% of CRSP (8,436 firms) | 17.39% of CRSP (3,254 firms) |
+| **Accuracy** | 95.4% overall | 95.0% overall |
+| **Confidence Range** | 0.90-0.98 | 0.95-0.98 |
+| **Validation Sample** | 1,000 matches | 500 matches |
+
+### Why Publication Coverage is Lower
+
+**Structural Limitations (Not Matching Failures):**
+
+1. **Foreign Companies Not in CRSP** (601,125 papers)
+   - Samsung (33,903 papers) - Korean, no US listing
+   - Toshiba (16,876 papers) - Japanese, no US listing
+   - Huawei (17,119 papers) - Chinese, private
+
+2. **Chinese State-Owned Enterprises** (153,285 papers)
+   - State Grid (15,618 papers)
+   - Shanghai Electric (7,873 papers)
+
+3. **Research Institutes, Not Firms** (50,000+ papers)
+   - Mitre (4,924 papers) - Federally funded R&D
+   - HRL Laboratories (2,702 papers) - Research lab
+
+4. **Selection Effect**
+   - Random sample: only 25% of patent firms publish
+   - Current 3,254 firms represents near-maximum for US-listed firms
+
+---
+
 ## 📁 Data Files Used
 
-- `data/processed/linking/patent_firm_matches_adjusted.parquet` (8,436 firms)
-- `data/processed/linking/publication_firm_matches_with_alternative_names.parquet` (3,254 firms)
+### Final Datasets
+- **Patent:** `data/processed/linking/patent_firm_matches_adjusted.parquet` (8,436 firms)
+- **Publication:** `data/processed/linking/publication_firm_matches_with_alternative_names.parquet` (3,254 firms)
+
+### Reference Data
 - `data/interim/compustat_firms_standardized.parquet` (18,709 firms)
 - `data/interim/publication_institutions_master.parquet` (16,278 institutions)
 
 ---
 
 **Generated:** 2026-02-15
+**Last Updated:** 2026-02-15 (Added methodology comparison)
 **Next:** Consider combining patent and publication datasets for comprehensive analysis
 **Validation:** Random sampling confirms low overlap is real, not a matching artifact
