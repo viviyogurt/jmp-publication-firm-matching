@@ -1,0 +1,21 @@
+# Patent Processing Requirements
+
+# Core data processing
+polars>=0.20.0
+pyarrow>=12.0.0
+rapidfuzz>=3.0.0
+
+# Text analysis and embeddings
+sentence-transformers>=2.2.0
+torch>=2.0.0
+scikit-learn>=1.3.0
+
+# Data validation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Progress tracking
+tqdm>=4.65.0
+
+# Configuration
+pyyaml>=6.0
